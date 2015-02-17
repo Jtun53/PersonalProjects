@@ -9,6 +9,8 @@
 #include <iostream>
 #include "LinkedList.h"
 #include "Node.cpp"
+//#define nullptr NULL
+
 //New linked list, so we set headPtr to null since no nodes
 //exist in the linked list yet, and so numNodes is also 0
 template <class ItemType>
@@ -37,7 +39,7 @@ void LinkedList<ItemType>::add(const ItemType &item){
     //  point to the new node.
         Node<ItemType> *cur = headPtr;
         while (cur->getNext()!=nullptr){
-              cur++;
+              cur = cur->getNext();
         }
         cur->setNext(ptr);
     }

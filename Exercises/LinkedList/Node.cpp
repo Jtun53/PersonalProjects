@@ -7,6 +7,7 @@
 //
 
 #include "Node.h"
+//#define nullptr NULL
 //constructor, sets ptrToNext for each new node to null
 template <class ItemType>
 Node<ItemType>::Node(){
