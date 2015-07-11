@@ -1,15 +1,19 @@
 <!DOCTYPE HTML>
 <html>
   <head>
-    <style>
-      body {background-color:#74BF43}
-    </style>
-   <script>
-      var firstName = prompt(`What is your first name?`);
-      alert(`Hello, ` + firstName);
+    <script>
+      function printFirstName(obj){
+        return obj.firstName;
+      }
     </script>
   </head>
+  <body>
     <p>Header..</p>
+    <script>
+      var person = {firstName:0, lastName:0};
+      person.firstName = prompt(`What is your first name`);
+      document.write(printFirstName(person));
+    </script>
     <p>Footer</p>
   </body>
 </html>
