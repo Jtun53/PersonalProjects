@@ -2,17 +2,17 @@
 <html>
   <head>
     <script>
-      function printFirstName(obj){
-        return obj.firstName;
-      }
+    var people = [`Person1`, `Person2`, `Person3`];
     </script>
   </head>
   <body>
     <p>Header..</p>
     <script>
-      var person = {firstName:0, lastName:0};
-      person.firstName = prompt(`What is your first name`);
-      document.write(printFirstName(person));
+      document.write(people[0]); //Should be Person1
+      var lastPerson = people.pop();
+      document.write(lastPerson); //Should be Person3
+      people.push(`addedPerson`);
+      document.write(people[2]); //should be addedPerson    
     </script>
     <p>Footer</p>
   </body>
