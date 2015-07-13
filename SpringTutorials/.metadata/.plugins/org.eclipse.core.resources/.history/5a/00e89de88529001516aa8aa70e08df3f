@@ -12,6 +12,6 @@
    
    <bean id="helloIndia" class="springTuts.HelloIndia" parent="helloWorld">
        <property name="message1" value="Hello India"/>
-       <property name="message3" value="Namaste India!"/>
+       <property name="message2" value="Namaste India!"/>
    </bean>
 </beans>
