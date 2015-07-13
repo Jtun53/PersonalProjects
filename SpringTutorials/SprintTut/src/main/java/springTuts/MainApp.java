@@ -7,9 +7,13 @@ public class MainApp {
 
 	public static void main(String[] args) {
 		ApplicationContext context = new ClassPathXmlApplicationContext("Bean.xml");
-		HelloWorld obj = (HelloWorld) context.getBean("helloWorld");
+		HelloWorld objA = (HelloWorld) context.getBean("helloWorld");
 		
-		obj.getMessage();
+		objA.setMessage("Object A");
+		objA.getMessage();
+		
+		HelloWorld objB = (HelloWorld) context.getBean("helloWorld");
+		objB.getMessage();//should be "Object A" since singleton bean
 	}
 
 }
