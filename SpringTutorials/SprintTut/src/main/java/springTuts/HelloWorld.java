@@ -4,6 +4,7 @@ public class HelloWorld {
   private String message1;
   private String message2;
   
+  
   public void setMessage1(String message){
 	  this.message1 = message;
   }
