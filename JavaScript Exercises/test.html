@@ -8,11 +8,21 @@
   <body>
     <p>Header..</p>
     <script>
-      document.write(people[0]); //Should be Person1
-      var lastPerson = people.pop();
-      document.write(lastPerson); //Should be Person3
-      people.push(`addedPerson`);
-      document.write(people[2]); //should be addedPerson    
+      people.splice(1,2,`PersonSpliced`,`anotherPersonSpliced`);
+      document.write(people[1]); //should be PersonSpliced
+      document.write(people[2]); //should be anotherPersonSpliced
+      var peopleSliced = people.slice(0,1);  
+      document.write(peopleSliced[0]);//should be Person1
+      
+      var fruits = [`Apples`, `Bananas`];
+      
+      people.shift();
+      document.write(people[0]);//should be PersonSpliced
+      people.unshift(`newPersonAdded`);
+      document.write(people[0]);//should be newPersonAdded
+      
+      fruits.shift();
+      document.write(fruits[0]);//should be bananas
     </script>
     <p>Footer</p>
   </body>
