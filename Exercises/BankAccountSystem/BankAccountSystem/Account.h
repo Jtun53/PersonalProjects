@@ -10,7 +10,10 @@
 #define Account_h
 
 class Account{
-    string name;
+    string firstName;
+    string lastName;
+    string accountNumber;
+    double balance;
 };
 
 #endif /* Account_h */
