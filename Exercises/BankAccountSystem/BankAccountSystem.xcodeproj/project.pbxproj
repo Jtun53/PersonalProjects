@@ -25,6 +25,7 @@
 /* Begin PBXFileReference section */
 		371BE6891BE3138A00E71EB6 /* BankAccountSystem */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = BankAccountSystem; sourceTree = BUILT_PRODUCTS_DIR; };
 		371BE68C1BE3138A00E71EB6 /* main.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = main.cpp; sourceTree = "<group>"; };
+		371BE6931BE32CD100E71EB6 /* Account.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Account.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,6 +59,7 @@
 			isa = PBXGroup;
 			children = (
 				371BE68C1BE3138A00E71EB6 /* main.cpp */,
+				371BE6931BE32CD100E71EB6 /* Account.h */,
 			);
 			path = BankAccountSystem;
 			sourceTree = "<group>";
@@ -235,6 +237,7 @@
 				371BE6921BE3138A00E71EB6 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
