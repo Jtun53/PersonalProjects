@@ -10,7 +10,7 @@
 #define Account_h
 
 class Account{
-    
+    string name;
 };
 
 #endif /* Account_h */
