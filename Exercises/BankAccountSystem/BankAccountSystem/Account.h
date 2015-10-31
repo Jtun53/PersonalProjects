@@ -30,7 +30,7 @@ class Account{
     std::string getLastName();
 
     void setAccountNumber(std::string accountNumber);
-    void getAccountNumer();
+    std::string getAccountNumer();
     
     /*set functionality as pure virtual to not allow Account objects be instantiated
     functions will be defined in derived classes*/
