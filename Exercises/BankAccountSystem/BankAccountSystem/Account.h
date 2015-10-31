@@ -10,10 +10,25 @@
 #define Account_h
 
 class Account{
-    string firstName;
-    string lastName;
-    string accountNumber;
+    enum Type { CHECKING, SAVINGS };
+    std::string firstName;
+    std::string lastName;
+    std::string accountNumber;
     double balance;
 };
+
+//virtual Account()=0;
+
+double getBalance();
+
+void setFirstName(std::string firstName);
+std::string getFirstName();
+
+void setLastName(std::string lastName);
+std::string getLastName();
+
+void setAccountNumber(std::string accountNumber);
+void getAccountNumer();
+
 
 #endif /* Account_h */
