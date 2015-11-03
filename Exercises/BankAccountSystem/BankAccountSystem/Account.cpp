@@ -10,8 +10,8 @@
 #include <iostream>
 #include "Account.h"
 
-double getBalance(){
-    return 0;
+double Account::getBalance(){
+    return this->balance;
 };
 
 void Account::setFirstName(std::string firstName){
@@ -19,22 +19,22 @@ void Account::setFirstName(std::string firstName){
 };
 
 std::string Account::getFirstName(){
-    return "";
+    return this -> firstName;
 };
 
 void Account::setLastName(std::string lastName){
-    
+    this -> lastName = lastName;
 };
 
 std::string Account::getLastName(){
-    return "";
+    return this -> lastName;
 };
 
 void Account::setAccountNumber(std::string accountNumber){
-    
+    this -> accountNumber = accountNumber;
 };
 
 std::string Account::getAccountNumer(){
-    return "";
+    return this -> accountNumber;
 };
 
