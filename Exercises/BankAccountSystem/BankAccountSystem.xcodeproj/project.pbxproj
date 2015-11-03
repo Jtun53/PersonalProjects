@@ -28,6 +28,7 @@
 		371BE68C1BE3138A00E71EB6 /* main.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = main.cpp; sourceTree = "<group>"; };
 		371BE6931BE32CD100E71EB6 /* Account.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Account.h; sourceTree = "<group>"; };
 		371BE6941BE5207C00E71EB6 /* Account.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Account.cpp; sourceTree = "<group>"; };
+		37E752C11BE8565A00F855AA /* Checking.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Checking.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -63,6 +64,7 @@
 				371BE68C1BE3138A00E71EB6 /* main.cpp */,
 				371BE6941BE5207C00E71EB6 /* Account.cpp */,
 				371BE6931BE32CD100E71EB6 /* Account.h */,
+				37E752C11BE8565A00F855AA /* Checking.h */,
 			);
 			path = BankAccountSystem;
 			sourceTree = "<group>";
