@@ -9,10 +9,10 @@
 #include <stdio.h>
 #include "Checking.h"
 
-void deposit(double amount){
-    
+void Checking::deposit(double amount){
+    this -> balance += amount;
 };
 
-double withdraw(double amount){
+double Checking::withdraw(double amount){
     return 0.0;
 };

@@ -8,16 +8,21 @@
 
 #ifndef Account_h
 #define Account_h
-
+#include <iostream>
 //Account type will be an abstract base class for Checking and Savings.
 class Account{
+
     enum Type { CHECKING, SAVINGS };
     std::string firstName;
     std::string lastName;
     std::string accountNumber;
+
+  protected:
     double balance;
 
-    
+  public:
+    Account();
+    ~Account();
     Account(Type, std::string firstName, std::string lastName, std::string accountNumber);
     
     //return the current amount in a person's account
@@ -34,8 +39,8 @@ class Account{
     
     /*set functionality as pure virtual to not allow Account objects be instantiated
     functions will be defined in derived classes*/
-    virtual void deposit()=0;
-    virtual void withdraw()=0;
+    virtual void deposit(double amount)=0;
+    virtual double withdraw(double amount)=0;
     
 };
 

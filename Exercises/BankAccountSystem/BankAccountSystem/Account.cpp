@@ -10,6 +10,13 @@
 #include <iostream>
 #include "Account.h"
 
+Account::Account(){
+    
+};
+Account::~Account(){
+    
+};
+
 double Account::getBalance(){
     return this->balance;
 };

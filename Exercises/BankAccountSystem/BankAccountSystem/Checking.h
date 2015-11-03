@@ -8,8 +8,10 @@
 
 #ifndef Checking_h
 #define Checking_h
+#include "Account.h"
 class Checking : public Account{
-    
+
+  public:
     void deposit(double amount);
     double withdraw(double amount);
 };

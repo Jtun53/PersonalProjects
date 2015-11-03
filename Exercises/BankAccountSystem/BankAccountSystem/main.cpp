@@ -7,10 +7,16 @@
 //
 
 #include <iostream>
-#include "Account.h"
+#include "Checking.h"
 
 int main(int argc, const char * argv[]) {
     // insert code here...
-    std::cout << "Hello, World!\n";
-    return 0;
+    Checking myAccount;
+    //myAccount.setFirstName("Test");
+    //myAccount.setLastName("Last");
+    //myAccount.setAccountNumber("1234");
+    //myAccount.deposit(20.00);
+    
+    //std::cout<<myAccount.getBalance();
+    
 }
