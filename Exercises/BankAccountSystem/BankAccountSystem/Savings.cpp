@@ -16,6 +16,5 @@ double Savings::withdraw(double amount){
       return 0;//Place holder for Exception
   numWithdraws++;
   setBalance(getBalance() - amount);
-    return getBalance();
+  return getBalance();
 };
-
