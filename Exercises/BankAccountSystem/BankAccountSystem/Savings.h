@@ -15,7 +15,7 @@ class Savings : public Account{
     int numWithdraws;
     
     public:
-      void withdraw(double amount);
+      double withdraw(double amount);
 };
 
 #endif /* Savings_h */

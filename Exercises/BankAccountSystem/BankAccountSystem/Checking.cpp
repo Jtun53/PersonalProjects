@@ -10,5 +10,10 @@
 #include "Checking.h"
 
 double Checking::withdraw(double amount){
-    return 0.0;
+    if (amount > getBalance())
+        return 0;//Exception placeholder
+    else{
+        setBalance(getBalance() - amount);
+        return getBalance();
+    }
 };

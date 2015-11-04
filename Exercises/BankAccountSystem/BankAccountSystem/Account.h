@@ -17,7 +17,6 @@ class Account{
     std::string lastName;
     std::string accountNumber;
 
-  protected:
     double balance;
 
   public:
@@ -27,6 +26,7 @@ class Account{
     
     //return the current amount in a person's account
     double getBalance();
+    void setBalance(double amount);
     
     void setFirstName(std::string firstName);
     std::string getFirstName();

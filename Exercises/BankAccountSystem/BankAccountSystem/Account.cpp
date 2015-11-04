@@ -50,3 +50,6 @@ void Account::deposit(double amount){
     this -> balance += amount;
 };
 
+void Account::setBalance(double amount){
+    this -> balance = amount;
+}

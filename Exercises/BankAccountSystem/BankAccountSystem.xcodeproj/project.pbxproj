@@ -10,6 +10,7 @@
 		371BE68D1BE3138A00E71EB6 /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 371BE68C1BE3138A00E71EB6 /* main.cpp */; };
 		371BE6951BE5207C00E71EB6 /* Account.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 371BE6941BE5207C00E71EB6 /* Account.cpp */; settings = {ASSET_TAGS = (); }; };
 		37E752C31BE868A800F855AA /* Checking.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 37E752C21BE868A800F855AA /* Checking.cpp */; settings = {ASSET_TAGS = (); }; };
+		37E752C61BE9C3D900F855AA /* Savings.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 37E752C51BE9C3D900F855AA /* Savings.cpp */; settings = {ASSET_TAGS = (); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -32,6 +33,7 @@
 		37E752C11BE8565A00F855AA /* Checking.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Checking.h; sourceTree = "<group>"; };
 		37E752C21BE868A800F855AA /* Checking.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Checking.cpp; sourceTree = "<group>"; };
 		37E752C41BE9BFFC00F855AA /* Savings.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Savings.h; sourceTree = "<group>"; };
+		37E752C51BE9C3D900F855AA /* Savings.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Savings.cpp; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -70,6 +72,7 @@
 				371BE6931BE32CD100E71EB6 /* Account.h */,
 				37E752C11BE8565A00F855AA /* Checking.h */,
 				37E752C41BE9BFFC00F855AA /* Savings.h */,
+				37E752C51BE9C3D900F855AA /* Savings.cpp */,
 			);
 			path = BankAccountSystem;
 			sourceTree = "<group>";
@@ -133,6 +136,7 @@
 				371BE68D1BE3138A00E71EB6 /* main.cpp in Sources */,
 				371BE6951BE5207C00E71EB6 /* Account.cpp in Sources */,
 				37E752C31BE868A800F855AA /* Checking.cpp in Sources */,
+				37E752C61BE9C3D900F855AA /* Savings.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
