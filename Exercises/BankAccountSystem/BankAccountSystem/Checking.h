@@ -12,7 +12,6 @@
 class Checking : public Account{
 
   public:
-    void deposit(double amount);
     double withdraw(double amount);
 };
 

@@ -46,3 +46,7 @@ std::string Account::getAccountNumer(){
     return this -> accountNumber;
 };
 
+void Account::deposit(double amount){
+    this -> balance += amount;
+};
+

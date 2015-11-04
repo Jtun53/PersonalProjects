@@ -37,9 +37,10 @@ class Account{
     void setAccountNumber(std::string accountNumber);
     std::string getAccountNumer();
     
+    void deposit(double amount);
+    
     /*set functionality as pure virtual to not allow Account objects be instantiated
     functions will be defined in derived classes*/
-    virtual void deposit(double amount)=0;
     virtual double withdraw(double amount)=0;
     
 };
