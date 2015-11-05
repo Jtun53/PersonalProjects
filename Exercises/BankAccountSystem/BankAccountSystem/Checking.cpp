@@ -8,12 +8,19 @@
 
 #include <stdio.h>
 #include "Checking.h"
+#include <stdexcept>
 
 double Checking::withdraw(double amount){
-    if (amount > getBalance())
-        return 0;//Exception placeholder
-    else{
-        setBalance(getBalance() - amount);
-        return getBalance();
+    try{
+        if (amount > getBalance())
+            throw std::runtime_error("Error, Withdraw amount larger than available balance");
+        else{
+            setBalance(getBalance() - amount);
+            return getBalance();
+        }
     }
+    catch (std::exception &e){
+        std:: cout << "Caught Exception: " << e.what();
+    }
+    return 0;
 };
