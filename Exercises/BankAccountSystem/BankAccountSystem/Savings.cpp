@@ -8,13 +8,20 @@
 
 #include <stdio.h>
 #include "Savings.h"
+#include <stdexcept>
 
 double Savings::withdraw(double amount){
-  if (numWithdraws == 5)
-      return 0;//Place holder for Exceptionn
-  else if(amount > getBalance())
-      return 0;//Place holder for Exception
-  numWithdraws++;
-  setBalance(getBalance() - amount);
-  return getBalance();
+    try {
+        if (numWithdraws == 5)
+            throw std::runtime_error("Withdrawn more than number of times allowed!");
+        else if(amount > getBalance())
+            throw std::runtime_error("Withdraw amount greater than available balance!");
+        numWithdraws++;
+        setBalance(getBalance() - amount);
+        return getBalance();
+    }
+    catch (std::exception &e){
+        std::cout << "Exception occcured!: " << e.what();
+    }
+    return 0;
 };
