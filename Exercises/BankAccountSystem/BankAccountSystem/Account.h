@@ -13,8 +13,6 @@
 class Account{
 
     enum Type { CHECKING, SAVINGS };
-    std::string firstName;
-    std::string lastName;
     std::string accountNumber;
 
     double balance;
@@ -27,12 +25,6 @@ class Account{
     //return the current amount in a person's account
     double getBalance();
     void setBalance(double amount);
-    
-    void setFirstName(std::string firstName);
-    std::string getFirstName();
-
-    void setLastName(std::string lastName);
-    std::string getLastName();
 
     void setAccountNumber(std::string accountNumber);
     std::string getAccountNumer();
