@@ -12,17 +12,22 @@
 #include "Savings.h"
 #include <vector>
 class Person{
-    string firstName; //Names should be in Person instead of Account class
-    string lastName;
+    std::string firstName; //Names should be in Person instead of Account class
+    std::string lastName;
     vector<Account> accounts;
+    Account *currentSelected;
     
-    string getFirstName();
+    std::string getFirstName();
     void setFirstName(std::string firstName);
     
-    string getLastName();
+    std::string getLastName();
     void setLastName(std::string lastName);
     
     void addAccount(Account anAccount);
+    Account getAccount(std::string);
+    void deposit(double amount);
+    void withdraw(double amount);
+    
 };
 
 #endif /* Person_h */
