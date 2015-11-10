@@ -14,7 +14,7 @@
 class Person{
     std::string firstName; //Names should be in Person instead of Account class
     std::string lastName;
-    vector<Account> accounts;
+    std::vector<Account> accounts;
     Account *currentSelected;
     
     std::string getFirstName();
