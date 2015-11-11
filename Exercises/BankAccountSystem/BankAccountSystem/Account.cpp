@@ -26,7 +26,7 @@ void Account::setAccountNumber(std::string accountNumber){
     this -> accountNumber = accountNumber;
 };
 
-std::string Account::getAccountNumer(){
+std::string Account::getAccountNumber(){
     return this -> accountNumber;
 };
 

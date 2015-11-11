@@ -27,7 +27,7 @@ class Account{
     void setBalance(double amount);
 
     void setAccountNumber(std::string accountNumber);
-    std::string getAccountNumer();
+    std::string getAccountNumber();
     
     void deposit(double amount);
     

@@ -25,18 +25,17 @@ void Person::setLastName(std::string lastName){
     this -> lastName = lastName;
 };
 
-void Person::addAccount(Account anAccount){
+void Person::addAccount(Account *anAccount){
     accounts.push_back(anAccount);
 };
 
-Account Person::getAccount(std::string accountToFind){
+Account* Person::getAccount(std::string accountToFind){
     for (auto i = accounts.begin(); i != accounts.end(); i++){
-        if (i->getAccountNumer() == accountToFind){
-            currentSelected = &*i;
+        if ((*i)->getAccountNumber() == accountToFind){
             return *i;
         }
     }
-    return Checking(); //Should error out
+    return nullptr; //Should error out
 };
 
 void Person::deposit(double amount){

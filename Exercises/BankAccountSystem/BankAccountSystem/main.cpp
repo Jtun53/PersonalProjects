@@ -7,10 +7,14 @@
 //
 
 #include <iostream>
-#include "Checking.h"
-#include "Savings.h"
+//#include "Person.h"
 
 int main(int argc, const char * argv[]) {
     // insert code here...
-    Checking myAccount;
+    //Person aPerson;
+    
+    //aPerson.setFirstName("John");
+    //std::cout<<aPerson.getFirstName() << std::endl; //output should be John
+    
+    
 }
