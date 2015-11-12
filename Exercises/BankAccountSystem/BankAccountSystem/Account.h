@@ -15,9 +15,10 @@ class Account{
     enum Type { CHECKING, SAVINGS };
     std::string accountNumber;
 
-    double balance;
+    double balance = 0;
 
   public:
+    Account(std::string accountNum);
     Account();
     ~Account();
     Account(Type, std::string firstName, std::string lastName, std::string accountNumber);

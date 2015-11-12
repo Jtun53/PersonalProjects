@@ -10,6 +10,10 @@
 #include <iostream>
 #include "Account.h"
 
+Account::Account(std::string accountNum){
+    this ->accountNumber = accountNum;
+}
+
 Account::Account(){
     
 };
