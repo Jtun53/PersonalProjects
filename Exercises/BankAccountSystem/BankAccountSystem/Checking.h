@@ -12,6 +12,7 @@
 class Checking : public Account{
 
   public:
+    Checking(std::string accountNum);
     double withdraw(double amount);
 };
 

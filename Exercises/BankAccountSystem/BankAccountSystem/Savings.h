@@ -15,6 +15,7 @@ class Savings : public Account{
     int numWithdraws;
     
     public:
+      Savings(std::string accountNum);
       double withdraw(double amount);
 };
 

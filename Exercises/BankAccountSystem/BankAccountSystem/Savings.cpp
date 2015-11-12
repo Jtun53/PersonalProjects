@@ -10,6 +10,8 @@
 #include "Savings.h"
 #include <stdexcept>
 
+Savings::Savings(std::string accountNum) : Account(accountNum){};
+
 double Savings::withdraw(double amount){
     try {
         if (numWithdraws == 5)

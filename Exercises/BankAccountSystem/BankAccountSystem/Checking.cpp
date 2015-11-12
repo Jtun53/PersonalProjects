@@ -10,6 +10,8 @@
 #include "Checking.h"
 #include <stdexcept>
 
+Checking::Checking(std::string accountNum) : Account(accountNum){};
+
 double Checking::withdraw(double amount){
     try{
         if (amount > getBalance())
