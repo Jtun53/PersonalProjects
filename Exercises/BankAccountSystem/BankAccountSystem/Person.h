@@ -29,7 +29,7 @@ public:
     Account* getAccount(std::string);
     void deposit(double amount);
     void withdraw(double amount);
-    
+    double getBalance();
 };
 
 #endif /* Person_h */

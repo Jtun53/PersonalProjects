@@ -32,7 +32,8 @@ void Person::addAccount(Account *anAccount){
 Account* Person::getAccount(std::string accountToFind){
     for (auto i = accounts.begin(); i != accounts.end(); i++){
         if ((*i)->getAccountNumber() == accountToFind){
-            return *i;
+            currentSelected = (*i);
+            return (*i);
         }
     }
     return nullptr; //Should error out
@@ -57,3 +58,7 @@ void Person::withdraw(double amount){
         currentSelected -> withdraw(amount);
     }
 };
+
+double Person::getBalance(){
+    return currentSelected -> getBalance();
+}
