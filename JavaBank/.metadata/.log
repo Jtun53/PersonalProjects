@@ -1,0 +1,787 @@
+!SESSION 2016-01-02 20:27:16.010 -----------------------------------------------
+eclipse.buildId=4.5.1.M20150904-0015
+java.version=1.8.0_45
+java.vendor=Oracle Corporation
+BootLoader constants: OS=macosx, ARCH=x86_64, WS=cocoa, NL=en_US
+Framework arguments:  -product org.eclipse.epp.package.java.product -keyring /Users/Johnny/.eclipse_keyring -showlocation
+Command-line arguments:  -os macosx -ws cocoa -arch x86_64 -product org.eclipse.epp.package.java.product -keyring /Users/Johnny/.eclipse_keyring -showlocation
+
+!ENTRY org.eclipse.core.net 1 0 2016-01-02 20:27:17.884
+!MESSAGE System property http.nonProxyHosts has been set to local|*.local|169.254/16|*.169.254/16 by an external source. This value will be overwritten using the values from the preferences
+
+!ENTRY org.eclipse.ui.workbench 4 2 2016-01-02 20:28:31.686
+!MESSAGE Problems occurred when invoking code from plug-in: "org.eclipse.ui.workbench".
+!STACK 0
+java.lang.IllegalStateException: The profile is currently in use.
+	at org.eclipse.equinox.internal.p2.engine.SimpleProfileRegistry.internalGetProfileStateProperties(SimpleProfileRegistry.java:1182)
+	at org.eclipse.equinox.internal.p2.engine.SimpleProfileRegistry.getProfileStateProperties(SimpleProfileRegistry.java:1172)
+	at org.eclipse.equinox.internal.p2.ui.sdk.scheduler.migration.MigrationSupport.isFirstTimeRunningThisSharedInstance(MigrationSupport.java:133)
+	at org.eclipse.equinox.internal.p2.ui.sdk.scheduler.migration.MigrationSupport.performMigration(MigrationSupport.java:54)
+	at org.eclipse.equinox.internal.p2.ui.sdk.scheduler.AutomaticUpdateScheduler.earlyStartup(AutomaticUpdateScheduler.java:90)
+	at org.eclipse.ui.internal.EarlyStartupRunnable.runEarlyStartup(EarlyStartupRunnable.java:90)
+	at org.eclipse.ui.internal.EarlyStartupRunnable.run(EarlyStartupRunnable.java:68)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:42)
+	at org.eclipse.ui.internal.Workbench$56.run(Workbench.java:2812)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:55)
+
+!ENTRY org.eclipse.ui 4 4 2016-01-02 20:28:31.771
+!MESSAGE Unhandled Exception
+
+!ENTRY org.eclipse.equinox.p2.ui.sdk.scheduler 4 0 2016-01-02 20:28:31.796
+!MESSAGE Unable to execute early startup code for an extension
+!STACK 0
+java.lang.IllegalStateException: The profile is currently in use.
+	at org.eclipse.equinox.internal.p2.engine.SimpleProfileRegistry.internalGetProfileStateProperties(SimpleProfileRegistry.java:1182)
+	at org.eclipse.equinox.internal.p2.engine.SimpleProfileRegistry.getProfileStateProperties(SimpleProfileRegistry.java:1172)
+	at org.eclipse.equinox.internal.p2.ui.sdk.scheduler.migration.MigrationSupport.isFirstTimeRunningThisSharedInstance(MigrationSupport.java:133)
+	at org.eclipse.equinox.internal.p2.ui.sdk.scheduler.migration.MigrationSupport.performMigration(MigrationSupport.java:54)
+	at org.eclipse.equinox.internal.p2.ui.sdk.scheduler.AutomaticUpdateScheduler.earlyStartup(AutomaticUpdateScheduler.java:90)
+	at org.eclipse.ui.internal.EarlyStartupRunnable.runEarlyStartup(EarlyStartupRunnable.java:90)
+	at org.eclipse.ui.internal.EarlyStartupRunnable.run(EarlyStartupRunnable.java:68)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:42)
+	at org.eclipse.ui.internal.Workbench$56.run(Workbench.java:2812)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:55)
+
+!ENTRY org.eclipse.epp.logging.aeri.ui 2 19 2016-01-02 20:28:57.696
+!MESSAGE Updating the index from remote failed. Version: 1.0.1.v20150913-0716
+!STACK 0
+java.lang.NullPointerException
+	at org.apache.lucene.index.IndexWriter.<init>(IndexWriter.java:1106)
+	at org.eclipse.epp.internal.logging.aeri.ui.log.ProblemsDatabaseService.replaceContent(ProblemsDatabaseService.java:173)
+	at org.eclipse.epp.internal.logging.aeri.ui.log.ProblemsDatabaseUpdateJob.run(ProblemsDatabaseUpdateJob.java:72)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:55)
+
+!ENTRY org.eclipse.egit.core 4 0 2016-01-02 20:30:01.354
+!MESSAGE Unable to ignore resources
+!STACK 0
+java.util.regex.PatternSyntaxException: Illegal repetition
+{\rtf1\ansi\ansicpg1252\cocoartf1348\cocoasubrtf170
+	at java.util.regex.Pattern.error(Pattern.java:1955)
+	at java.util.regex.Pattern.closure(Pattern.java:3157)
+	at java.util.regex.Pattern.sequence(Pattern.java:2134)
+	at java.util.regex.Pattern.expr(Pattern.java:1996)
+	at java.util.regex.Pattern.compile(Pattern.java:1696)
+	at java.util.regex.Pattern.<init>(Pattern.java:1351)
+	at java.util.regex.Pattern.compile(Pattern.java:1028)
+	at org.eclipse.jgit.ignore.internal.Strings.convertGlob(Strings.java:352)
+	at org.eclipse.jgit.ignore.internal.WildCardMatcher.<init>(WildCardMatcher.java:66)
+	at org.eclipse.jgit.ignore.internal.PathMatcher.createNameMatcher0(PathMatcher.java:145)
+	at org.eclipse.jgit.ignore.internal.PathMatcher.createPathMatcher(PathMatcher.java:127)
+	at org.eclipse.jgit.ignore.FastIgnoreRule.<init>(FastIgnoreRule.java:112)
+	at org.eclipse.jgit.ignore.IgnoreNode.parse(IgnoreNode.java:114)
+	at org.eclipse.jgit.treewalk.WorkingTreeIterator$PerDirectoryIgnoreNode.load(WorkingTreeIterator.java:1215)
+	at org.eclipse.jgit.treewalk.WorkingTreeIterator$RootIgnoreNode.load(WorkingTreeIterator.java:1236)
+	at org.eclipse.jgit.treewalk.WorkingTreeIterator.getIgnoreNode(WorkingTreeIterator.java:648)
+	at org.eclipse.jgit.treewalk.WorkingTreeIterator.isEntryIgnored(WorkingTreeIterator.java:616)
+	at org.eclipse.jgit.treewalk.WorkingTreeIterator.isEntryIgnored(WorkingTreeIterator.java:641)
+	at org.eclipse.jgit.treewalk.WorkingTreeIterator.isEntryIgnored(WorkingTreeIterator.java:641)
+	at org.eclipse.jgit.treewalk.WorkingTreeIterator.isEntryIgnored(WorkingTreeIterator.java:599)
+	at org.eclipse.jgit.treewalk.WorkingTreeIterator.isEntryIgnored(WorkingTreeIterator.java:586)
+	at org.eclipse.egit.core.RepositoryUtil.isIgnored(RepositoryUtil.java:492)
+	at org.eclipse.egit.core.op.IgnoreOperation.execute(IgnoreOperation.java:95)
+	at org.eclipse.egit.core.op.ConnectProviderOperation.autoIgnoreDerivedResources(ConnectProviderOperation.java:180)
+	at org.eclipse.egit.core.op.ConnectProviderOperation.execute(ConnectProviderOperation.java:155)
+	at org.eclipse.egit.core.internal.job.JobUtil$1.run(JobUtil.java:53)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:55)
+
+!ENTRY org.eclipse.core.jobs 4 2 2016-01-02 20:30:01.778
+!MESSAGE An internal error occurred during: "Computing Git status for repository PersonalProjects".
+!STACK 0
+java.util.regex.PatternSyntaxException: Illegal repetition
+{\rtf1\ansi\ansicpg1252\cocoartf1348\cocoasubrtf170
+	at java.util.regex.Pattern.error(Pattern.java:1955)
+	at java.util.regex.Pattern.closure(Pattern.java:3157)
+	at java.util.regex.Pattern.sequence(Pattern.java:2134)
+	at java.util.regex.Pattern.expr(Pattern.java:1996)
+	at java.util.regex.Pattern.compile(Pattern.java:1696)
+	at java.util.regex.Pattern.<init>(Pattern.java:1351)
+	at java.util.regex.Pattern.compile(Pattern.java:1028)
+	at org.eclipse.jgit.ignore.internal.Strings.convertGlob(Strings.java:352)
+	at org.eclipse.jgit.ignore.internal.WildCardMatcher.<init>(WildCardMatcher.java:66)
+	at org.eclipse.jgit.ignore.internal.PathMatcher.createNameMatcher0(PathMatcher.java:145)
+	at org.eclipse.jgit.ignore.internal.PathMatcher.createPathMatcher(PathMatcher.java:127)
+	at org.eclipse.jgit.ignore.FastIgnoreRule.<init>(FastIgnoreRule.java:112)
+	at org.eclipse.jgit.ignore.IgnoreNode.parse(IgnoreNode.java:114)
+	at org.eclipse.jgit.treewalk.WorkingTreeIterator$PerDirectoryIgnoreNode.load(WorkingTreeIterator.java:1215)
+	at org.eclipse.jgit.treewalk.WorkingTreeIterator$RootIgnoreNode.load(WorkingTreeIterator.java:1236)
+	at org.eclipse.jgit.treewalk.WorkingTreeIterator.getIgnoreNode(WorkingTreeIterator.java:648)
+	at org.eclipse.jgit.treewalk.WorkingTreeIterator.isEntryIgnored(WorkingTreeIterator.java:616)
+	at org.eclipse.jgit.treewalk.WorkingTreeIterator.isEntryIgnored(WorkingTreeIterator.java:599)
+	at org.eclipse.jgit.treewalk.WorkingTreeIterator.isEntryIgnored(WorkingTreeIterator.java:586)
+	at org.eclipse.jgit.treewalk.filter.IndexDiffFilter.include(IndexDiffFilter.java:157)
+	at org.eclipse.jgit.treewalk.filter.AndTreeFilter$List.include(AndTreeFilter.java:163)
+	at org.eclipse.jgit.treewalk.TreeWalk.next(TreeWalk.java:572)
+	at org.eclipse.jgit.lib.IndexDiff.diff(IndexDiff.java:434)
+	at org.eclipse.egit.core.internal.indexdiff.IndexDiffCacheEntry.calcIndexDiffDataFull(IndexDiffCacheEntry.java:534)
+	at org.eclipse.egit.core.internal.indexdiff.IndexDiffCacheEntry.access$6(IndexDiffCacheEntry.java:523)
+	at org.eclipse.egit.core.internal.indexdiff.IndexDiffCacheEntry$4.run(IndexDiffCacheEntry.java:290)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:55)
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2016-01-02 20:30:01.889
+!MESSAGE Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2016-01-02 20:30:01.899
+!MESSAGE Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.eclipse.core.jobs 4 2 2016-01-02 20:30:15.455
+!MESSAGE An internal error occurred during: "Computing Git status for repository PersonalProjects".
+!STACK 0
+java.util.regex.PatternSyntaxException: Illegal repetition
+{\rtf1\ansi\ansicpg1252\cocoartf1348\cocoasubrtf170
+	at java.util.regex.Pattern.error(Pattern.java:1955)
+	at java.util.regex.Pattern.closure(Pattern.java:3157)
+	at java.util.regex.Pattern.sequence(Pattern.java:2134)
+	at java.util.regex.Pattern.expr(Pattern.java:1996)
+	at java.util.regex.Pattern.compile(Pattern.java:1696)
+	at java.util.regex.Pattern.<init>(Pattern.java:1351)
+	at java.util.regex.Pattern.compile(Pattern.java:1028)
+	at org.eclipse.jgit.ignore.internal.Strings.convertGlob(Strings.java:352)
+	at org.eclipse.jgit.ignore.internal.WildCardMatcher.<init>(WildCardMatcher.java:66)
+	at org.eclipse.jgit.ignore.internal.PathMatcher.createNameMatcher0(PathMatcher.java:145)
+	at org.eclipse.jgit.ignore.internal.PathMatcher.createPathMatcher(PathMatcher.java:127)
+	at org.eclipse.jgit.ignore.FastIgnoreRule.<init>(FastIgnoreRule.java:112)
+	at org.eclipse.jgit.ignore.IgnoreNode.parse(IgnoreNode.java:114)
+	at org.eclipse.jgit.treewalk.WorkingTreeIterator$PerDirectoryIgnoreNode.load(WorkingTreeIterator.java:1215)
+	at org.eclipse.jgit.treewalk.WorkingTreeIterator$RootIgnoreNode.load(WorkingTreeIterator.java:1236)
+	at org.eclipse.jgit.treewalk.WorkingTreeIterator.getIgnoreNode(WorkingTreeIterator.java:648)
+	at org.eclipse.jgit.treewalk.WorkingTreeIterator.isEntryIgnored(WorkingTreeIterator.java:616)
+	at org.eclipse.jgit.treewalk.WorkingTreeIterator.isEntryIgnored(WorkingTreeIterator.java:599)
+	at org.eclipse.jgit.treewalk.WorkingTreeIterator.isEntryIgnored(WorkingTreeIterator.java:586)
+	at org.eclipse.jgit.treewalk.filter.IndexDiffFilter.include(IndexDiffFilter.java:157)
+	at org.eclipse.jgit.treewalk.filter.AndTreeFilter$List.include(AndTreeFilter.java:163)
+	at org.eclipse.jgit.treewalk.TreeWalk.next(TreeWalk.java:572)
+	at org.eclipse.jgit.lib.IndexDiff.diff(IndexDiff.java:434)
+	at org.eclipse.egit.core.internal.indexdiff.IndexDiffCacheEntry.calcIndexDiffDataFull(IndexDiffCacheEntry.java:534)
+	at org.eclipse.egit.core.internal.indexdiff.IndexDiffCacheEntry.access$6(IndexDiffCacheEntry.java:523)
+	at org.eclipse.egit.core.internal.indexdiff.IndexDiffCacheEntry$4.run(IndexDiffCacheEntry.java:290)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:55)
+
+!ENTRY org.eclipse.core.resources 4 2 2016-01-02 20:31:29.838
+!MESSAGE Problems occurred when invoking code from plug-in: "org.eclipse.core.resources".
+!STACK 0
+java.util.regex.PatternSyntaxException: Illegal repetition
+{\rtf1\ansi\ansicpg1252\cocoartf1348\cocoasubrtf170
+	at java.util.regex.Pattern.error(Pattern.java:1955)
+	at java.util.regex.Pattern.closure(Pattern.java:3157)
+	at java.util.regex.Pattern.sequence(Pattern.java:2134)
+	at java.util.regex.Pattern.expr(Pattern.java:1996)
+	at java.util.regex.Pattern.compile(Pattern.java:1696)
+	at java.util.regex.Pattern.<init>(Pattern.java:1351)
+	at java.util.regex.Pattern.compile(Pattern.java:1028)
+	at org.eclipse.jgit.ignore.internal.Strings.convertGlob(Strings.java:352)
+	at org.eclipse.jgit.ignore.internal.WildCardMatcher.<init>(WildCardMatcher.java:66)
+	at org.eclipse.jgit.ignore.internal.PathMatcher.createNameMatcher0(PathMatcher.java:145)
+	at org.eclipse.jgit.ignore.internal.PathMatcher.createPathMatcher(PathMatcher.java:127)
+	at org.eclipse.jgit.ignore.FastIgnoreRule.<init>(FastIgnoreRule.java:112)
+	at org.eclipse.jgit.ignore.IgnoreNode.parse(IgnoreNode.java:114)
+	at org.eclipse.jgit.treewalk.WorkingTreeIterator$PerDirectoryIgnoreNode.load(WorkingTreeIterator.java:1215)
+	at org.eclipse.jgit.treewalk.WorkingTreeIterator$RootIgnoreNode.load(WorkingTreeIterator.java:1236)
+	at org.eclipse.jgit.treewalk.WorkingTreeIterator.getIgnoreNode(WorkingTreeIterator.java:648)
+	at org.eclipse.jgit.treewalk.WorkingTreeIterator.isEntryIgnored(WorkingTreeIterator.java:616)
+	at org.eclipse.jgit.treewalk.WorkingTreeIterator.isEntryIgnored(WorkingTreeIterator.java:641)
+	at org.eclipse.jgit.treewalk.WorkingTreeIterator.isEntryIgnored(WorkingTreeIterator.java:641)
+	at org.eclipse.jgit.treewalk.WorkingTreeIterator.isEntryIgnored(WorkingTreeIterator.java:599)
+	at org.eclipse.jgit.treewalk.WorkingTreeIterator.isEntryIgnored(WorkingTreeIterator.java:586)
+	at org.eclipse.egit.core.RepositoryUtil.isIgnored(RepositoryUtil.java:492)
+	at org.eclipse.egit.core.Activator$IgnoreDerivedResources$1.visit(Activator.java:517)
+	at org.eclipse.core.internal.events.ResourceDelta.accept(ResourceDelta.java:63)
+	at org.eclipse.core.internal.events.ResourceDelta.accept(ResourceDelta.java:74)
+	at org.eclipse.core.internal.events.ResourceDelta.accept(ResourceDelta.java:74)
+	at org.eclipse.core.internal.events.ResourceDelta.accept(ResourceDelta.java:47)
+	at org.eclipse.egit.core.Activator$IgnoreDerivedResources.resourceChanged(Activator.java:495)
+	at org.eclipse.core.internal.events.NotificationManager$1.run(NotificationManager.java:299)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:42)
+	at org.eclipse.core.internal.events.NotificationManager.notify(NotificationManager.java:289)
+	at org.eclipse.core.internal.events.NotificationManager.broadcastChanges(NotificationManager.java:152)
+	at org.eclipse.core.internal.resources.Workspace.broadcastPostChange(Workspace.java:373)
+	at org.eclipse.core.internal.resources.Workspace.endOperation(Workspace.java:1470)
+	at org.eclipse.core.internal.resources.Resource.refreshLocal(Resource.java:1598)
+	at org.eclipse.debug.core.RefreshUtil.refreshResources(RefreshUtil.java:131)
+	at org.eclipse.debug.core.RefreshUtil.refreshResources(RefreshUtil.java:291)
+	at org.eclipse.debug.ui.RefreshTab.refreshResources(RefreshTab.java:408)
+	at org.eclipse.m2e.internal.launch.MavenRuntimeLaunchSupport$BackgroundResourceRefresher$1.run(MavenRuntimeLaunchSupport.java:197)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:55)
+
+!ENTRY org.eclipse.core.jobs 4 2 2016-01-02 20:31:29.848
+!MESSAGE An internal error occurred during: "Computing Git status for repository PersonalProjects".
+!STACK 0
+java.util.regex.PatternSyntaxException: Illegal repetition
+{\rtf1\ansi\ansicpg1252\cocoartf1348\cocoasubrtf170
+	at java.util.regex.Pattern.error(Pattern.java:1955)
+	at java.util.regex.Pattern.closure(Pattern.java:3157)
+	at java.util.regex.Pattern.sequence(Pattern.java:2134)
+	at java.util.regex.Pattern.expr(Pattern.java:1996)
+	at java.util.regex.Pattern.compile(Pattern.java:1696)
+	at java.util.regex.Pattern.<init>(Pattern.java:1351)
+	at java.util.regex.Pattern.compile(Pattern.java:1028)
+	at org.eclipse.jgit.ignore.internal.Strings.convertGlob(Strings.java:352)
+	at org.eclipse.jgit.ignore.internal.WildCardMatcher.<init>(WildCardMatcher.java:66)
+	at org.eclipse.jgit.ignore.internal.PathMatcher.createNameMatcher0(PathMatcher.java:145)
+	at org.eclipse.jgit.ignore.internal.PathMatcher.createPathMatcher(PathMatcher.java:127)
+	at org.eclipse.jgit.ignore.FastIgnoreRule.<init>(FastIgnoreRule.java:112)
+	at org.eclipse.jgit.ignore.IgnoreNode.parse(IgnoreNode.java:114)
+	at org.eclipse.jgit.treewalk.WorkingTreeIterator$PerDirectoryIgnoreNode.load(WorkingTreeIterator.java:1215)
+	at org.eclipse.jgit.treewalk.WorkingTreeIterator$RootIgnoreNode.load(WorkingTreeIterator.java:1236)
+	at org.eclipse.jgit.treewalk.WorkingTreeIterator.getIgnoreNode(WorkingTreeIterator.java:648)
+	at org.eclipse.jgit.treewalk.WorkingTreeIterator.isEntryIgnored(WorkingTreeIterator.java:616)
+	at org.eclipse.jgit.treewalk.WorkingTreeIterator.isEntryIgnored(WorkingTreeIterator.java:599)
+	at org.eclipse.jgit.treewalk.WorkingTreeIterator.isEntryIgnored(WorkingTreeIterator.java:586)
+	at org.eclipse.jgit.treewalk.filter.IndexDiffFilter.include(IndexDiffFilter.java:157)
+	at org.eclipse.jgit.treewalk.filter.AndTreeFilter$List.include(AndTreeFilter.java:163)
+	at org.eclipse.jgit.treewalk.TreeWalk.next(TreeWalk.java:572)
+	at org.eclipse.jgit.lib.IndexDiff.diff(IndexDiff.java:434)
+	at org.eclipse.egit.core.internal.indexdiff.IndexDiffCacheEntry.calcIndexDiffDataFull(IndexDiffCacheEntry.java:534)
+	at org.eclipse.egit.core.internal.indexdiff.IndexDiffCacheEntry.access$6(IndexDiffCacheEntry.java:523)
+	at org.eclipse.egit.core.internal.indexdiff.IndexDiffCacheEntry$4.run(IndexDiffCacheEntry.java:290)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:55)
+
+!ENTRY org.eclipse.core.jobs 4 2 2016-01-02 20:31:29.872
+!MESSAGE An internal error occurred during: "Computing Git status for repository PersonalProjects".
+!STACK 0
+java.util.regex.PatternSyntaxException: Illegal repetition
+{\rtf1\ansi\ansicpg1252\cocoartf1348\cocoasubrtf170
+	at java.util.regex.Pattern.error(Pattern.java:1955)
+	at java.util.regex.Pattern.closure(Pattern.java:3157)
+	at java.util.regex.Pattern.sequence(Pattern.java:2134)
+	at java.util.regex.Pattern.expr(Pattern.java:1996)
+	at java.util.regex.Pattern.compile(Pattern.java:1696)
+	at java.util.regex.Pattern.<init>(Pattern.java:1351)
+	at java.util.regex.Pattern.compile(Pattern.java:1028)
+	at org.eclipse.jgit.ignore.internal.Strings.convertGlob(Strings.java:352)
+	at org.eclipse.jgit.ignore.internal.WildCardMatcher.<init>(WildCardMatcher.java:66)
+	at org.eclipse.jgit.ignore.internal.PathMatcher.createNameMatcher0(PathMatcher.java:145)
+	at org.eclipse.jgit.ignore.internal.PathMatcher.createPathMatcher(PathMatcher.java:127)
+	at org.eclipse.jgit.ignore.FastIgnoreRule.<init>(FastIgnoreRule.java:112)
+	at org.eclipse.jgit.ignore.IgnoreNode.parse(IgnoreNode.java:114)
+	at org.eclipse.jgit.treewalk.WorkingTreeIterator$PerDirectoryIgnoreNode.load(WorkingTreeIterator.java:1215)
+	at org.eclipse.jgit.treewalk.WorkingTreeIterator$RootIgnoreNode.load(WorkingTreeIterator.java:1236)
+	at org.eclipse.jgit.treewalk.WorkingTreeIterator.getIgnoreNode(WorkingTreeIterator.java:648)
+	at org.eclipse.jgit.treewalk.WorkingTreeIterator.isEntryIgnored(WorkingTreeIterator.java:616)
+	at org.eclipse.jgit.treewalk.WorkingTreeIterator.isEntryIgnored(WorkingTreeIterator.java:599)
+	at org.eclipse.jgit.treewalk.WorkingTreeIterator.isEntryIgnored(WorkingTreeIterator.java:586)
+	at org.eclipse.jgit.treewalk.filter.IndexDiffFilter.include(IndexDiffFilter.java:157)
+	at org.eclipse.jgit.treewalk.filter.AndTreeFilter$List.include(AndTreeFilter.java:163)
+	at org.eclipse.jgit.treewalk.TreeWalk.next(TreeWalk.java:572)
+	at org.eclipse.jgit.lib.IndexDiff.diff(IndexDiff.java:434)
+	at org.eclipse.egit.core.internal.indexdiff.IndexDiffCacheEntry.calcIndexDiffDataFull(IndexDiffCacheEntry.java:534)
+	at org.eclipse.egit.core.internal.indexdiff.IndexDiffCacheEntry.access$6(IndexDiffCacheEntry.java:523)
+	at org.eclipse.egit.core.internal.indexdiff.IndexDiffCacheEntry$4.run(IndexDiffCacheEntry.java:290)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:55)
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2016-01-02 20:31:29.979
+!MESSAGE Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2016-01-02 20:31:29.986
+!MESSAGE Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.eclipse.core.jobs 4 2 2016-01-02 20:32:08.092
+!MESSAGE An internal error occurred during: "Computing Git status for repository PersonalProjects".
+!STACK 0
+java.util.regex.PatternSyntaxException: Illegal repetition
+{\rtf1\ansi\ansicpg1252\cocoartf1348\cocoasubrtf170
+	at java.util.regex.Pattern.error(Pattern.java:1955)
+	at java.util.regex.Pattern.closure(Pattern.java:3157)
+	at java.util.regex.Pattern.sequence(Pattern.java:2134)
+	at java.util.regex.Pattern.expr(Pattern.java:1996)
+	at java.util.regex.Pattern.compile(Pattern.java:1696)
+	at java.util.regex.Pattern.<init>(Pattern.java:1351)
+	at java.util.regex.Pattern.compile(Pattern.java:1028)
+	at org.eclipse.jgit.ignore.internal.Strings.convertGlob(Strings.java:352)
+	at org.eclipse.jgit.ignore.internal.WildCardMatcher.<init>(WildCardMatcher.java:66)
+	at org.eclipse.jgit.ignore.internal.PathMatcher.createNameMatcher0(PathMatcher.java:145)
+	at org.eclipse.jgit.ignore.internal.PathMatcher.createPathMatcher(PathMatcher.java:127)
+	at org.eclipse.jgit.ignore.FastIgnoreRule.<init>(FastIgnoreRule.java:112)
+	at org.eclipse.jgit.ignore.IgnoreNode.parse(IgnoreNode.java:114)
+	at org.eclipse.jgit.treewalk.WorkingTreeIterator$PerDirectoryIgnoreNode.load(WorkingTreeIterator.java:1215)
+	at org.eclipse.jgit.treewalk.WorkingTreeIterator$RootIgnoreNode.load(WorkingTreeIterator.java:1236)
+	at org.eclipse.jgit.treewalk.WorkingTreeIterator.getIgnoreNode(WorkingTreeIterator.java:648)
+	at org.eclipse.jgit.treewalk.WorkingTreeIterator.isEntryIgnored(WorkingTreeIterator.java:616)
+	at org.eclipse.jgit.treewalk.WorkingTreeIterator.isEntryIgnored(WorkingTreeIterator.java:599)
+	at org.eclipse.jgit.treewalk.WorkingTreeIterator.isEntryIgnored(WorkingTreeIterator.java:586)
+	at org.eclipse.jgit.treewalk.filter.IndexDiffFilter.include(IndexDiffFilter.java:157)
+	at org.eclipse.jgit.treewalk.filter.AndTreeFilter$List.include(AndTreeFilter.java:163)
+	at org.eclipse.jgit.treewalk.TreeWalk.next(TreeWalk.java:572)
+	at org.eclipse.jgit.lib.IndexDiff.diff(IndexDiff.java:434)
+	at org.eclipse.egit.core.internal.indexdiff.IndexDiffCacheEntry.calcIndexDiffDataFull(IndexDiffCacheEntry.java:534)
+	at org.eclipse.egit.core.internal.indexdiff.IndexDiffCacheEntry.access$6(IndexDiffCacheEntry.java:523)
+	at org.eclipse.egit.core.internal.indexdiff.IndexDiffCacheEntry$4.run(IndexDiffCacheEntry.java:290)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:55)
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2016-01-02 20:32:08.248
+!MESSAGE Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2016-01-02 20:32:08.253
+!MESSAGE Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.eclipse.core.resources 4 2 2016-01-02 20:32:08.258
+!MESSAGE Problems occurred when invoking code from plug-in: "org.eclipse.core.resources".
+!STACK 0
+java.util.regex.PatternSyntaxException: Illegal repetition
+{\rtf1\ansi\ansicpg1252\cocoartf1348\cocoasubrtf170
+	at java.util.regex.Pattern.error(Pattern.java:1955)
+	at java.util.regex.Pattern.closure(Pattern.java:3157)
+	at java.util.regex.Pattern.sequence(Pattern.java:2134)
+	at java.util.regex.Pattern.expr(Pattern.java:1996)
+	at java.util.regex.Pattern.compile(Pattern.java:1696)
+	at java.util.regex.Pattern.<init>(Pattern.java:1351)
+	at java.util.regex.Pattern.compile(Pattern.java:1028)
+	at org.eclipse.jgit.ignore.internal.Strings.convertGlob(Strings.java:352)
+	at org.eclipse.jgit.ignore.internal.WildCardMatcher.<init>(WildCardMatcher.java:66)
+	at org.eclipse.jgit.ignore.internal.PathMatcher.createNameMatcher0(PathMatcher.java:145)
+	at org.eclipse.jgit.ignore.internal.PathMatcher.createPathMatcher(PathMatcher.java:127)
+	at org.eclipse.jgit.ignore.FastIgnoreRule.<init>(FastIgnoreRule.java:112)
+	at org.eclipse.jgit.ignore.IgnoreNode.parse(IgnoreNode.java:114)
+	at org.eclipse.jgit.treewalk.WorkingTreeIterator$PerDirectoryIgnoreNode.load(WorkingTreeIterator.java:1215)
+	at org.eclipse.jgit.treewalk.WorkingTreeIterator$RootIgnoreNode.load(WorkingTreeIterator.java:1236)
+	at org.eclipse.jgit.treewalk.WorkingTreeIterator.getIgnoreNode(WorkingTreeIterator.java:648)
+	at org.eclipse.jgit.treewalk.WorkingTreeIterator.isEntryIgnored(WorkingTreeIterator.java:616)
+	at org.eclipse.jgit.treewalk.WorkingTreeIterator.isEntryIgnored(WorkingTreeIterator.java:641)
+	at org.eclipse.jgit.treewalk.WorkingTreeIterator.isEntryIgnored(WorkingTreeIterator.java:641)
+	at org.eclipse.jgit.treewalk.WorkingTreeIterator.isEntryIgnored(WorkingTreeIterator.java:599)
+	at org.eclipse.jgit.treewalk.WorkingTreeIterator.isEntryIgnored(WorkingTreeIterator.java:586)
+	at org.eclipse.egit.core.RepositoryUtil.isIgnored(RepositoryUtil.java:492)
+	at org.eclipse.egit.core.Activator$IgnoreDerivedResources$1.visit(Activator.java:517)
+	at org.eclipse.core.internal.events.ResourceDelta.accept(ResourceDelta.java:63)
+	at org.eclipse.core.internal.events.ResourceDelta.accept(ResourceDelta.java:74)
+	at org.eclipse.core.internal.events.ResourceDelta.accept(ResourceDelta.java:74)
+	at org.eclipse.core.internal.events.ResourceDelta.accept(ResourceDelta.java:47)
+	at org.eclipse.egit.core.Activator$IgnoreDerivedResources.resourceChanged(Activator.java:495)
+	at org.eclipse.core.internal.events.NotificationManager$1.run(NotificationManager.java:299)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:42)
+	at org.eclipse.core.internal.events.NotificationManager.notify(NotificationManager.java:289)
+	at org.eclipse.core.internal.events.NotificationManager.broadcastChanges(NotificationManager.java:152)
+	at org.eclipse.core.internal.resources.Workspace.broadcastPostChange(Workspace.java:373)
+	at org.eclipse.core.internal.resources.Workspace.endOperation(Workspace.java:1470)
+	at org.eclipse.core.internal.events.AutoBuildJob.doBuild(AutoBuildJob.java:157)
+	at org.eclipse.core.internal.events.AutoBuildJob.run(AutoBuildJob.java:235)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:55)
+
+!ENTRY org.eclipse.core.jobs 4 2 2016-01-02 20:32:08.262
+!MESSAGE An internal error occurred during: "Computing Git status for repository PersonalProjects".
+!STACK 0
+java.util.regex.PatternSyntaxException: Illegal repetition
+{\rtf1\ansi\ansicpg1252\cocoartf1348\cocoasubrtf170
+	at java.util.regex.Pattern.error(Pattern.java:1955)
+	at java.util.regex.Pattern.closure(Pattern.java:3157)
+	at java.util.regex.Pattern.sequence(Pattern.java:2134)
+	at java.util.regex.Pattern.expr(Pattern.java:1996)
+	at java.util.regex.Pattern.compile(Pattern.java:1696)
+	at java.util.regex.Pattern.<init>(Pattern.java:1351)
+	at java.util.regex.Pattern.compile(Pattern.java:1028)
+	at org.eclipse.jgit.ignore.internal.Strings.convertGlob(Strings.java:352)
+	at org.eclipse.jgit.ignore.internal.WildCardMatcher.<init>(WildCardMatcher.java:66)
+	at org.eclipse.jgit.ignore.internal.PathMatcher.createNameMatcher0(PathMatcher.java:145)
+	at org.eclipse.jgit.ignore.internal.PathMatcher.createPathMatcher(PathMatcher.java:127)
+	at org.eclipse.jgit.ignore.FastIgnoreRule.<init>(FastIgnoreRule.java:112)
+	at org.eclipse.jgit.ignore.IgnoreNode.parse(IgnoreNode.java:114)
+	at org.eclipse.jgit.treewalk.WorkingTreeIterator$PerDirectoryIgnoreNode.load(WorkingTreeIterator.java:1215)
+	at org.eclipse.jgit.treewalk.WorkingTreeIterator$RootIgnoreNode.load(WorkingTreeIterator.java:1236)
+	at org.eclipse.jgit.treewalk.WorkingTreeIterator.getIgnoreNode(WorkingTreeIterator.java:648)
+	at org.eclipse.jgit.treewalk.WorkingTreeIterator.isEntryIgnored(WorkingTreeIterator.java:616)
+	at org.eclipse.jgit.treewalk.WorkingTreeIterator.isEntryIgnored(WorkingTreeIterator.java:599)
+	at org.eclipse.jgit.treewalk.WorkingTreeIterator.isEntryIgnored(WorkingTreeIterator.java:586)
+	at org.eclipse.jgit.treewalk.filter.IndexDiffFilter.include(IndexDiffFilter.java:157)
+	at org.eclipse.jgit.treewalk.filter.AndTreeFilter$List.include(AndTreeFilter.java:163)
+	at org.eclipse.jgit.treewalk.TreeWalk.next(TreeWalk.java:572)
+	at org.eclipse.jgit.lib.IndexDiff.diff(IndexDiff.java:434)
+	at org.eclipse.egit.core.internal.indexdiff.IndexDiffCacheEntry.calcIndexDiffDataFull(IndexDiffCacheEntry.java:534)
+	at org.eclipse.egit.core.internal.indexdiff.IndexDiffCacheEntry.access$6(IndexDiffCacheEntry.java:523)
+	at org.eclipse.egit.core.internal.indexdiff.IndexDiffCacheEntry$4.run(IndexDiffCacheEntry.java:290)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:55)
+
+!ENTRY org.eclipse.core.jobs 4 2 2016-01-02 20:32:08.853
+!MESSAGE An internal error occurred during: "Computing Git status for repository PersonalProjects".
+!STACK 0
+java.util.regex.PatternSyntaxException: Illegal repetition
+{\rtf1\ansi\ansicpg1252\cocoartf1348\cocoasubrtf170
+	at java.util.regex.Pattern.error(Pattern.java:1955)
+	at java.util.regex.Pattern.closure(Pattern.java:3157)
+	at java.util.regex.Pattern.sequence(Pattern.java:2134)
+	at java.util.regex.Pattern.expr(Pattern.java:1996)
+	at java.util.regex.Pattern.compile(Pattern.java:1696)
+	at java.util.regex.Pattern.<init>(Pattern.java:1351)
+	at java.util.regex.Pattern.compile(Pattern.java:1028)
+	at org.eclipse.jgit.ignore.internal.Strings.convertGlob(Strings.java:352)
+	at org.eclipse.jgit.ignore.internal.WildCardMatcher.<init>(WildCardMatcher.java:66)
+	at org.eclipse.jgit.ignore.internal.PathMatcher.createNameMatcher0(PathMatcher.java:145)
+	at org.eclipse.jgit.ignore.internal.PathMatcher.createPathMatcher(PathMatcher.java:127)
+	at org.eclipse.jgit.ignore.FastIgnoreRule.<init>(FastIgnoreRule.java:112)
+	at org.eclipse.jgit.ignore.IgnoreNode.parse(IgnoreNode.java:114)
+	at org.eclipse.jgit.treewalk.WorkingTreeIterator$PerDirectoryIgnoreNode.load(WorkingTreeIterator.java:1215)
+	at org.eclipse.jgit.treewalk.WorkingTreeIterator$RootIgnoreNode.load(WorkingTreeIterator.java:1236)
+	at org.eclipse.jgit.treewalk.WorkingTreeIterator.getIgnoreNode(WorkingTreeIterator.java:648)
+	at org.eclipse.jgit.treewalk.WorkingTreeIterator.isEntryIgnored(WorkingTreeIterator.java:616)
+	at org.eclipse.jgit.treewalk.WorkingTreeIterator.isEntryIgnored(WorkingTreeIterator.java:599)
+	at org.eclipse.jgit.treewalk.WorkingTreeIterator.isEntryIgnored(WorkingTreeIterator.java:586)
+	at org.eclipse.jgit.treewalk.filter.IndexDiffFilter.include(IndexDiffFilter.java:157)
+	at org.eclipse.jgit.treewalk.filter.AndTreeFilter$List.include(AndTreeFilter.java:163)
+	at org.eclipse.jgit.treewalk.TreeWalk.next(TreeWalk.java:572)
+	at org.eclipse.jgit.lib.IndexDiff.diff(IndexDiff.java:434)
+	at org.eclipse.egit.core.internal.indexdiff.IndexDiffCacheEntry.calcIndexDiffDataFull(IndexDiffCacheEntry.java:534)
+	at org.eclipse.egit.core.internal.indexdiff.IndexDiffCacheEntry.access$6(IndexDiffCacheEntry.java:523)
+	at org.eclipse.egit.core.internal.indexdiff.IndexDiffCacheEntry$4.run(IndexDiffCacheEntry.java:290)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:55)
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2016-01-02 20:32:09.281
+!MESSAGE Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2016-01-02 20:32:09.284
+!MESSAGE Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.eclipse.core.jobs 4 2 2016-01-02 20:32:39.047
+!MESSAGE An internal error occurred during: "Computing Git status for repository PersonalProjects".
+!STACK 0
+java.util.regex.PatternSyntaxException: Illegal repetition
+{\rtf1\ansi\ansicpg1252\cocoartf1348\cocoasubrtf170
+	at java.util.regex.Pattern.error(Pattern.java:1955)
+	at java.util.regex.Pattern.closure(Pattern.java:3157)
+	at java.util.regex.Pattern.sequence(Pattern.java:2134)
+	at java.util.regex.Pattern.expr(Pattern.java:1996)
+	at java.util.regex.Pattern.compile(Pattern.java:1696)
+	at java.util.regex.Pattern.<init>(Pattern.java:1351)
+	at java.util.regex.Pattern.compile(Pattern.java:1028)
+	at org.eclipse.jgit.ignore.internal.Strings.convertGlob(Strings.java:352)
+	at org.eclipse.jgit.ignore.internal.WildCardMatcher.<init>(WildCardMatcher.java:66)
+	at org.eclipse.jgit.ignore.internal.PathMatcher.createNameMatcher0(PathMatcher.java:145)
+	at org.eclipse.jgit.ignore.internal.PathMatcher.createPathMatcher(PathMatcher.java:127)
+	at org.eclipse.jgit.ignore.FastIgnoreRule.<init>(FastIgnoreRule.java:112)
+	at org.eclipse.jgit.ignore.IgnoreNode.parse(IgnoreNode.java:114)
+	at org.eclipse.jgit.treewalk.WorkingTreeIterator$PerDirectoryIgnoreNode.load(WorkingTreeIterator.java:1215)
+	at org.eclipse.jgit.treewalk.WorkingTreeIterator$RootIgnoreNode.load(WorkingTreeIterator.java:1236)
+	at org.eclipse.jgit.treewalk.WorkingTreeIterator.getIgnoreNode(WorkingTreeIterator.java:648)
+	at org.eclipse.jgit.treewalk.WorkingTreeIterator.isEntryIgnored(WorkingTreeIterator.java:616)
+	at org.eclipse.jgit.treewalk.WorkingTreeIterator.isEntryIgnored(WorkingTreeIterator.java:599)
+	at org.eclipse.jgit.treewalk.WorkingTreeIterator.isEntryIgnored(WorkingTreeIterator.java:586)
+	at org.eclipse.jgit.treewalk.filter.IndexDiffFilter.include(IndexDiffFilter.java:157)
+	at org.eclipse.jgit.treewalk.filter.AndTreeFilter$List.include(AndTreeFilter.java:163)
+	at org.eclipse.jgit.treewalk.TreeWalk.next(TreeWalk.java:572)
+	at org.eclipse.jgit.lib.IndexDiff.diff(IndexDiff.java:434)
+	at org.eclipse.egit.core.internal.indexdiff.IndexDiffCacheEntry.calcIndexDiffDataFull(IndexDiffCacheEntry.java:534)
+	at org.eclipse.egit.core.internal.indexdiff.IndexDiffCacheEntry.access$6(IndexDiffCacheEntry.java:523)
+	at org.eclipse.egit.core.internal.indexdiff.IndexDiffCacheEntry$4.run(IndexDiffCacheEntry.java:290)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:55)
+
+!ENTRY org.eclipse.core.jobs 4 2 2016-01-02 20:32:39.051
+!MESSAGE An internal error occurred during: "Computing Git status for repository PersonalProjects".
+!STACK 0
+java.util.regex.PatternSyntaxException: Illegal repetition
+{\rtf1\ansi\ansicpg1252\cocoartf1348\cocoasubrtf170
+	at java.util.regex.Pattern.error(Pattern.java:1955)
+	at java.util.regex.Pattern.closure(Pattern.java:3157)
+	at java.util.regex.Pattern.sequence(Pattern.java:2134)
+	at java.util.regex.Pattern.expr(Pattern.java:1996)
+	at java.util.regex.Pattern.compile(Pattern.java:1696)
+	at java.util.regex.Pattern.<init>(Pattern.java:1351)
+	at java.util.regex.Pattern.compile(Pattern.java:1028)
+	at org.eclipse.jgit.ignore.internal.Strings.convertGlob(Strings.java:352)
+	at org.eclipse.jgit.ignore.internal.WildCardMatcher.<init>(WildCardMatcher.java:66)
+	at org.eclipse.jgit.ignore.internal.PathMatcher.createNameMatcher0(PathMatcher.java:145)
+	at org.eclipse.jgit.ignore.internal.PathMatcher.createPathMatcher(PathMatcher.java:127)
+	at org.eclipse.jgit.ignore.FastIgnoreRule.<init>(FastIgnoreRule.java:112)
+	at org.eclipse.jgit.ignore.IgnoreNode.parse(IgnoreNode.java:114)
+	at org.eclipse.jgit.treewalk.WorkingTreeIterator$PerDirectoryIgnoreNode.load(WorkingTreeIterator.java:1215)
+	at org.eclipse.jgit.treewalk.WorkingTreeIterator$RootIgnoreNode.load(WorkingTreeIterator.java:1236)
+	at org.eclipse.jgit.treewalk.WorkingTreeIterator.getIgnoreNode(WorkingTreeIterator.java:648)
+	at org.eclipse.jgit.treewalk.WorkingTreeIterator.isEntryIgnored(WorkingTreeIterator.java:616)
+	at org.eclipse.jgit.treewalk.WorkingTreeIterator.isEntryIgnored(WorkingTreeIterator.java:599)
+	at org.eclipse.jgit.treewalk.WorkingTreeIterator.isEntryIgnored(WorkingTreeIterator.java:586)
+	at org.eclipse.jgit.treewalk.filter.IndexDiffFilter.include(IndexDiffFilter.java:157)
+	at org.eclipse.jgit.treewalk.filter.AndTreeFilter$List.include(AndTreeFilter.java:163)
+	at org.eclipse.jgit.treewalk.TreeWalk.next(TreeWalk.java:572)
+	at org.eclipse.jgit.lib.IndexDiff.diff(IndexDiff.java:434)
+	at org.eclipse.egit.core.internal.indexdiff.IndexDiffCacheEntry.calcIndexDiffDataFull(IndexDiffCacheEntry.java:534)
+	at org.eclipse.egit.core.internal.indexdiff.IndexDiffCacheEntry.access$6(IndexDiffCacheEntry.java:523)
+	at org.eclipse.egit.core.internal.indexdiff.IndexDiffCacheEntry$4.run(IndexDiffCacheEntry.java:290)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:55)
+
+!ENTRY org.eclipse.core.jobs 4 2 2016-01-02 20:32:39.056
+!MESSAGE An internal error occurred during: "Computing Git status for repository PersonalProjects".
+!STACK 0
+java.util.regex.PatternSyntaxException: Illegal repetition
+{\rtf1\ansi\ansicpg1252\cocoartf1348\cocoasubrtf170
+	at java.util.regex.Pattern.error(Pattern.java:1955)
+	at java.util.regex.Pattern.closure(Pattern.java:3157)
+	at java.util.regex.Pattern.sequence(Pattern.java:2134)
+	at java.util.regex.Pattern.expr(Pattern.java:1996)
+	at java.util.regex.Pattern.compile(Pattern.java:1696)
+	at java.util.regex.Pattern.<init>(Pattern.java:1351)
+	at java.util.regex.Pattern.compile(Pattern.java:1028)
+	at org.eclipse.jgit.ignore.internal.Strings.convertGlob(Strings.java:352)
+	at org.eclipse.jgit.ignore.internal.WildCardMatcher.<init>(WildCardMatcher.java:66)
+	at org.eclipse.jgit.ignore.internal.PathMatcher.createNameMatcher0(PathMatcher.java:145)
+	at org.eclipse.jgit.ignore.internal.PathMatcher.createPathMatcher(PathMatcher.java:127)
+	at org.eclipse.jgit.ignore.FastIgnoreRule.<init>(FastIgnoreRule.java:112)
+	at org.eclipse.jgit.ignore.IgnoreNode.parse(IgnoreNode.java:114)
+	at org.eclipse.jgit.treewalk.WorkingTreeIterator$PerDirectoryIgnoreNode.load(WorkingTreeIterator.java:1215)
+	at org.eclipse.jgit.treewalk.WorkingTreeIterator$RootIgnoreNode.load(WorkingTreeIterator.java:1236)
+	at org.eclipse.jgit.treewalk.WorkingTreeIterator.getIgnoreNode(WorkingTreeIterator.java:648)
+	at org.eclipse.jgit.treewalk.WorkingTreeIterator.isEntryIgnored(WorkingTreeIterator.java:616)
+	at org.eclipse.jgit.treewalk.WorkingTreeIterator.isEntryIgnored(WorkingTreeIterator.java:599)
+	at org.eclipse.jgit.treewalk.WorkingTreeIterator.isEntryIgnored(WorkingTreeIterator.java:586)
+	at org.eclipse.jgit.treewalk.filter.IndexDiffFilter.include(IndexDiffFilter.java:157)
+	at org.eclipse.jgit.treewalk.filter.AndTreeFilter$List.include(AndTreeFilter.java:163)
+	at org.eclipse.jgit.treewalk.TreeWalk.next(TreeWalk.java:572)
+	at org.eclipse.jgit.lib.IndexDiff.diff(IndexDiff.java:434)
+	at org.eclipse.egit.core.internal.indexdiff.IndexDiffCacheEntry.calcIndexDiffDataFull(IndexDiffCacheEntry.java:534)
+	at org.eclipse.egit.core.internal.indexdiff.IndexDiffCacheEntry.access$6(IndexDiffCacheEntry.java:523)
+	at org.eclipse.egit.core.internal.indexdiff.IndexDiffCacheEntry$4.run(IndexDiffCacheEntry.java:290)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:55)
+
+!ENTRY org.eclipse.core.jobs 4 2 2016-01-02 20:32:43.636
+!MESSAGE An internal error occurred during: "Computing Git status for repository PersonalProjects".
+!STACK 0
+java.util.regex.PatternSyntaxException: Illegal repetition
+{\rtf1\ansi\ansicpg1252\cocoartf1348\cocoasubrtf170
+	at java.util.regex.Pattern.error(Pattern.java:1955)
+	at java.util.regex.Pattern.closure(Pattern.java:3157)
+	at java.util.regex.Pattern.sequence(Pattern.java:2134)
+	at java.util.regex.Pattern.expr(Pattern.java:1996)
+	at java.util.regex.Pattern.compile(Pattern.java:1696)
+	at java.util.regex.Pattern.<init>(Pattern.java:1351)
+	at java.util.regex.Pattern.compile(Pattern.java:1028)
+	at org.eclipse.jgit.ignore.internal.Strings.convertGlob(Strings.java:352)
+	at org.eclipse.jgit.ignore.internal.WildCardMatcher.<init>(WildCardMatcher.java:66)
+	at org.eclipse.jgit.ignore.internal.PathMatcher.createNameMatcher0(PathMatcher.java:145)
+	at org.eclipse.jgit.ignore.internal.PathMatcher.createPathMatcher(PathMatcher.java:127)
+	at org.eclipse.jgit.ignore.FastIgnoreRule.<init>(FastIgnoreRule.java:112)
+	at org.eclipse.jgit.ignore.IgnoreNode.parse(IgnoreNode.java:114)
+	at org.eclipse.jgit.treewalk.WorkingTreeIterator$PerDirectoryIgnoreNode.load(WorkingTreeIterator.java:1215)
+	at org.eclipse.jgit.treewalk.WorkingTreeIterator$RootIgnoreNode.load(WorkingTreeIterator.java:1236)
+	at org.eclipse.jgit.treewalk.WorkingTreeIterator.getIgnoreNode(WorkingTreeIterator.java:648)
+	at org.eclipse.jgit.treewalk.WorkingTreeIterator.isEntryIgnored(WorkingTreeIterator.java:616)
+	at org.eclipse.jgit.treewalk.WorkingTreeIterator.isEntryIgnored(WorkingTreeIterator.java:599)
+	at org.eclipse.jgit.treewalk.WorkingTreeIterator.isEntryIgnored(WorkingTreeIterator.java:586)
+	at org.eclipse.jgit.treewalk.filter.IndexDiffFilter.include(IndexDiffFilter.java:157)
+	at org.eclipse.jgit.treewalk.filter.AndTreeFilter$List.include(AndTreeFilter.java:163)
+	at org.eclipse.jgit.treewalk.TreeWalk.next(TreeWalk.java:572)
+	at org.eclipse.jgit.lib.IndexDiff.diff(IndexDiff.java:434)
+	at org.eclipse.egit.core.internal.indexdiff.IndexDiffCacheEntry.calcIndexDiffDataFull(IndexDiffCacheEntry.java:534)
+	at org.eclipse.egit.core.internal.indexdiff.IndexDiffCacheEntry.access$6(IndexDiffCacheEntry.java:523)
+	at org.eclipse.egit.core.internal.indexdiff.IndexDiffCacheEntry$4.run(IndexDiffCacheEntry.java:290)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:55)
+
+!ENTRY org.eclipse.core.jobs 4 2 2016-01-02 20:32:43.650
+!MESSAGE An internal error occurred during: "Computing Git status for repository PersonalProjects".
+!STACK 0
+java.util.regex.PatternSyntaxException: Illegal repetition
+{\rtf1\ansi\ansicpg1252\cocoartf1348\cocoasubrtf170
+	at java.util.regex.Pattern.error(Pattern.java:1955)
+	at java.util.regex.Pattern.closure(Pattern.java:3157)
+	at java.util.regex.Pattern.sequence(Pattern.java:2134)
+	at java.util.regex.Pattern.expr(Pattern.java:1996)
+	at java.util.regex.Pattern.compile(Pattern.java:1696)
+	at java.util.regex.Pattern.<init>(Pattern.java:1351)
+	at java.util.regex.Pattern.compile(Pattern.java:1028)
+	at org.eclipse.jgit.ignore.internal.Strings.convertGlob(Strings.java:352)
+	at org.eclipse.jgit.ignore.internal.WildCardMatcher.<init>(WildCardMatcher.java:66)
+	at org.eclipse.jgit.ignore.internal.PathMatcher.createNameMatcher0(PathMatcher.java:145)
+	at org.eclipse.jgit.ignore.internal.PathMatcher.createPathMatcher(PathMatcher.java:127)
+	at org.eclipse.jgit.ignore.FastIgnoreRule.<init>(FastIgnoreRule.java:112)
+	at org.eclipse.jgit.ignore.IgnoreNode.parse(IgnoreNode.java:114)
+	at org.eclipse.jgit.treewalk.WorkingTreeIterator$PerDirectoryIgnoreNode.load(WorkingTreeIterator.java:1215)
+	at org.eclipse.jgit.treewalk.WorkingTreeIterator$RootIgnoreNode.load(WorkingTreeIterator.java:1236)
+	at org.eclipse.jgit.treewalk.WorkingTreeIterator.getIgnoreNode(WorkingTreeIterator.java:648)
+	at org.eclipse.jgit.treewalk.WorkingTreeIterator.isEntryIgnored(WorkingTreeIterator.java:616)
+	at org.eclipse.jgit.treewalk.WorkingTreeIterator.isEntryIgnored(WorkingTreeIterator.java:599)
+	at org.eclipse.jgit.treewalk.WorkingTreeIterator.isEntryIgnored(WorkingTreeIterator.java:586)
+	at org.eclipse.jgit.treewalk.filter.IndexDiffFilter.include(IndexDiffFilter.java:157)
+	at org.eclipse.jgit.treewalk.filter.AndTreeFilter$List.include(AndTreeFilter.java:163)
+	at org.eclipse.jgit.treewalk.TreeWalk.next(TreeWalk.java:572)
+	at org.eclipse.jgit.lib.IndexDiff.diff(IndexDiff.java:434)
+	at org.eclipse.egit.core.internal.indexdiff.IndexDiffCacheEntry.calcIndexDiffDataFull(IndexDiffCacheEntry.java:534)
+	at org.eclipse.egit.core.internal.indexdiff.IndexDiffCacheEntry.access$6(IndexDiffCacheEntry.java:523)
+	at org.eclipse.egit.core.internal.indexdiff.IndexDiffCacheEntry$4.run(IndexDiffCacheEntry.java:290)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:55)
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2016-01-02 20:32:44.301
+!MESSAGE Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2016-01-02 20:32:44.308
+!MESSAGE Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.eclipse.core.jobs 4 2 2016-01-02 20:32:44.336
+!MESSAGE An internal error occurred during: "Computing Git status for repository PersonalProjects".
+!STACK 0
+java.util.regex.PatternSyntaxException: Illegal repetition
+{\rtf1\ansi\ansicpg1252\cocoartf1348\cocoasubrtf170
+	at java.util.regex.Pattern.error(Pattern.java:1955)
+	at java.util.regex.Pattern.closure(Pattern.java:3157)
+	at java.util.regex.Pattern.sequence(Pattern.java:2134)
+	at java.util.regex.Pattern.expr(Pattern.java:1996)
+	at java.util.regex.Pattern.compile(Pattern.java:1696)
+	at java.util.regex.Pattern.<init>(Pattern.java:1351)
+	at java.util.regex.Pattern.compile(Pattern.java:1028)
+	at org.eclipse.jgit.ignore.internal.Strings.convertGlob(Strings.java:352)
+	at org.eclipse.jgit.ignore.internal.WildCardMatcher.<init>(WildCardMatcher.java:66)
+	at org.eclipse.jgit.ignore.internal.PathMatcher.createNameMatcher0(PathMatcher.java:145)
+	at org.eclipse.jgit.ignore.internal.PathMatcher.createPathMatcher(PathMatcher.java:127)
+	at org.eclipse.jgit.ignore.FastIgnoreRule.<init>(FastIgnoreRule.java:112)
+	at org.eclipse.jgit.ignore.IgnoreNode.parse(IgnoreNode.java:114)
+	at org.eclipse.jgit.treewalk.WorkingTreeIterator$PerDirectoryIgnoreNode.load(WorkingTreeIterator.java:1215)
+	at org.eclipse.jgit.treewalk.WorkingTreeIterator$RootIgnoreNode.load(WorkingTreeIterator.java:1236)
+	at org.eclipse.jgit.treewalk.WorkingTreeIterator.getIgnoreNode(WorkingTreeIterator.java:648)
+	at org.eclipse.jgit.treewalk.WorkingTreeIterator.isEntryIgnored(WorkingTreeIterator.java:616)
+	at org.eclipse.jgit.treewalk.WorkingTreeIterator.isEntryIgnored(WorkingTreeIterator.java:599)
+	at org.eclipse.jgit.treewalk.WorkingTreeIterator.isEntryIgnored(WorkingTreeIterator.java:586)
+	at org.eclipse.jgit.treewalk.filter.IndexDiffFilter.include(IndexDiffFilter.java:157)
+	at org.eclipse.jgit.treewalk.filter.AndTreeFilter$List.include(AndTreeFilter.java:163)
+	at org.eclipse.jgit.treewalk.TreeWalk.next(TreeWalk.java:572)
+	at org.eclipse.jgit.lib.IndexDiff.diff(IndexDiff.java:434)
+	at org.eclipse.egit.core.internal.indexdiff.IndexDiffCacheEntry.calcIndexDiffDataFull(IndexDiffCacheEntry.java:534)
+	at org.eclipse.egit.core.internal.indexdiff.IndexDiffCacheEntry.access$6(IndexDiffCacheEntry.java:523)
+	at org.eclipse.egit.core.internal.indexdiff.IndexDiffCacheEntry$4.run(IndexDiffCacheEntry.java:290)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:55)
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2016-01-02 20:32:44.503
+!MESSAGE Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2016-01-02 20:32:44.511
+!MESSAGE Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.eclipse.core.jobs 4 2 2016-01-02 20:32:44.518
+!MESSAGE An internal error occurred during: "Computing Git status for repository PersonalProjects".
+!STACK 0
+java.util.regex.PatternSyntaxException: Illegal repetition
+{\rtf1\ansi\ansicpg1252\cocoartf1348\cocoasubrtf170
+	at java.util.regex.Pattern.error(Pattern.java:1955)
+	at java.util.regex.Pattern.closure(Pattern.java:3157)
+	at java.util.regex.Pattern.sequence(Pattern.java:2134)
+	at java.util.regex.Pattern.expr(Pattern.java:1996)
+	at java.util.regex.Pattern.compile(Pattern.java:1696)
+	at java.util.regex.Pattern.<init>(Pattern.java:1351)
+	at java.util.regex.Pattern.compile(Pattern.java:1028)
+	at org.eclipse.jgit.ignore.internal.Strings.convertGlob(Strings.java:352)
+	at org.eclipse.jgit.ignore.internal.WildCardMatcher.<init>(WildCardMatcher.java:66)
+	at org.eclipse.jgit.ignore.internal.PathMatcher.createNameMatcher0(PathMatcher.java:145)
+	at org.eclipse.jgit.ignore.internal.PathMatcher.createPathMatcher(PathMatcher.java:127)
+	at org.eclipse.jgit.ignore.FastIgnoreRule.<init>(FastIgnoreRule.java:112)
+	at org.eclipse.jgit.ignore.IgnoreNode.parse(IgnoreNode.java:114)
+	at org.eclipse.jgit.treewalk.WorkingTreeIterator$PerDirectoryIgnoreNode.load(WorkingTreeIterator.java:1215)
+	at org.eclipse.jgit.treewalk.WorkingTreeIterator$RootIgnoreNode.load(WorkingTreeIterator.java:1236)
+	at org.eclipse.jgit.treewalk.WorkingTreeIterator.getIgnoreNode(WorkingTreeIterator.java:648)
+	at org.eclipse.jgit.treewalk.WorkingTreeIterator.isEntryIgnored(WorkingTreeIterator.java:616)
+	at org.eclipse.jgit.treewalk.WorkingTreeIterator.isEntryIgnored(WorkingTreeIterator.java:599)
+	at org.eclipse.jgit.treewalk.WorkingTreeIterator.isEntryIgnored(WorkingTreeIterator.java:586)
+	at org.eclipse.jgit.treewalk.filter.IndexDiffFilter.include(IndexDiffFilter.java:157)
+	at org.eclipse.jgit.treewalk.filter.AndTreeFilter$List.include(AndTreeFilter.java:163)
+	at org.eclipse.jgit.treewalk.TreeWalk.next(TreeWalk.java:572)
+	at org.eclipse.jgit.lib.IndexDiff.diff(IndexDiff.java:434)
+	at org.eclipse.egit.core.internal.indexdiff.IndexDiffCacheEntry.calcIndexDiffDataFull(IndexDiffCacheEntry.java:534)
+	at org.eclipse.egit.core.internal.indexdiff.IndexDiffCacheEntry.access$6(IndexDiffCacheEntry.java:523)
+	at org.eclipse.egit.core.internal.indexdiff.IndexDiffCacheEntry$4.run(IndexDiffCacheEntry.java:290)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:55)
+
+!ENTRY org.eclipse.core.jobs 4 2 2016-01-02 20:33:51.620
+!MESSAGE An internal error occurred during: "Computing Git status for repository PersonalProjects".
+!STACK 0
+java.util.regex.PatternSyntaxException: Illegal repetition
+{\rtf1\ansi\ansicpg1252\cocoartf1348\cocoasubrtf170
+	at java.util.regex.Pattern.error(Pattern.java:1955)
+	at java.util.regex.Pattern.closure(Pattern.java:3157)
+	at java.util.regex.Pattern.sequence(Pattern.java:2134)
+	at java.util.regex.Pattern.expr(Pattern.java:1996)
+	at java.util.regex.Pattern.compile(Pattern.java:1696)
+	at java.util.regex.Pattern.<init>(Pattern.java:1351)
+	at java.util.regex.Pattern.compile(Pattern.java:1028)
+	at org.eclipse.jgit.ignore.internal.Strings.convertGlob(Strings.java:352)
+	at org.eclipse.jgit.ignore.internal.WildCardMatcher.<init>(WildCardMatcher.java:66)
+	at org.eclipse.jgit.ignore.internal.PathMatcher.createNameMatcher0(PathMatcher.java:145)
+	at org.eclipse.jgit.ignore.internal.PathMatcher.createPathMatcher(PathMatcher.java:127)
+	at org.eclipse.jgit.ignore.FastIgnoreRule.<init>(FastIgnoreRule.java:112)
+	at org.eclipse.jgit.ignore.IgnoreNode.parse(IgnoreNode.java:114)
+	at org.eclipse.jgit.treewalk.WorkingTreeIterator$PerDirectoryIgnoreNode.load(WorkingTreeIterator.java:1215)
+	at org.eclipse.jgit.treewalk.WorkingTreeIterator$RootIgnoreNode.load(WorkingTreeIterator.java:1236)
+	at org.eclipse.jgit.treewalk.WorkingTreeIterator.getIgnoreNode(WorkingTreeIterator.java:648)
+	at org.eclipse.jgit.treewalk.WorkingTreeIterator.isEntryIgnored(WorkingTreeIterator.java:616)
+	at org.eclipse.jgit.treewalk.WorkingTreeIterator.isEntryIgnored(WorkingTreeIterator.java:599)
+	at org.eclipse.jgit.treewalk.WorkingTreeIterator.isEntryIgnored(WorkingTreeIterator.java:586)
+	at org.eclipse.jgit.treewalk.filter.IndexDiffFilter.include(IndexDiffFilter.java:157)
+	at org.eclipse.jgit.treewalk.filter.AndTreeFilter$List.include(AndTreeFilter.java:163)
+	at org.eclipse.jgit.treewalk.TreeWalk.next(TreeWalk.java:572)
+	at org.eclipse.jgit.lib.IndexDiff.diff(IndexDiff.java:434)
+	at org.eclipse.egit.core.internal.indexdiff.IndexDiffCacheEntry.calcIndexDiffDataFull(IndexDiffCacheEntry.java:534)
+	at org.eclipse.egit.core.internal.indexdiff.IndexDiffCacheEntry.access$6(IndexDiffCacheEntry.java:523)
+	at org.eclipse.egit.core.internal.indexdiff.IndexDiffCacheEntry$4.run(IndexDiffCacheEntry.java:290)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:55)
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2016-01-02 20:33:51.753
+!MESSAGE Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2016-01-02 20:33:51.757
+!MESSAGE Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.eclipse.core.resources 4 2 2016-01-02 20:33:51.762
+!MESSAGE Problems occurred when invoking code from plug-in: "org.eclipse.core.resources".
+!STACK 0
+java.util.regex.PatternSyntaxException: Illegal repetition
+{\rtf1\ansi\ansicpg1252\cocoartf1348\cocoasubrtf170
+	at java.util.regex.Pattern.error(Pattern.java:1955)
+	at java.util.regex.Pattern.closure(Pattern.java:3157)
+	at java.util.regex.Pattern.sequence(Pattern.java:2134)
+	at java.util.regex.Pattern.expr(Pattern.java:1996)
+	at java.util.regex.Pattern.compile(Pattern.java:1696)
+	at java.util.regex.Pattern.<init>(Pattern.java:1351)
+	at java.util.regex.Pattern.compile(Pattern.java:1028)
+	at org.eclipse.jgit.ignore.internal.Strings.convertGlob(Strings.java:352)
+	at org.eclipse.jgit.ignore.internal.WildCardMatcher.<init>(WildCardMatcher.java:66)
+	at org.eclipse.jgit.ignore.internal.PathMatcher.createNameMatcher0(PathMatcher.java:145)
+	at org.eclipse.jgit.ignore.internal.PathMatcher.createPathMatcher(PathMatcher.java:127)
+	at org.eclipse.jgit.ignore.FastIgnoreRule.<init>(FastIgnoreRule.java:112)
+	at org.eclipse.jgit.ignore.IgnoreNode.parse(IgnoreNode.java:114)
+	at org.eclipse.jgit.treewalk.WorkingTreeIterator$PerDirectoryIgnoreNode.load(WorkingTreeIterator.java:1215)
+	at org.eclipse.jgit.treewalk.WorkingTreeIterator$RootIgnoreNode.load(WorkingTreeIterator.java:1236)
+	at org.eclipse.jgit.treewalk.WorkingTreeIterator.getIgnoreNode(WorkingTreeIterator.java:648)
+	at org.eclipse.jgit.treewalk.WorkingTreeIterator.isEntryIgnored(WorkingTreeIterator.java:616)
+	at org.eclipse.jgit.treewalk.WorkingTreeIterator.isEntryIgnored(WorkingTreeIterator.java:641)
+	at org.eclipse.jgit.treewalk.WorkingTreeIterator.isEntryIgnored(WorkingTreeIterator.java:641)
+	at org.eclipse.jgit.treewalk.WorkingTreeIterator.isEntryIgnored(WorkingTreeIterator.java:599)
+	at org.eclipse.jgit.treewalk.WorkingTreeIterator.isEntryIgnored(WorkingTreeIterator.java:586)
+	at org.eclipse.egit.core.RepositoryUtil.isIgnored(RepositoryUtil.java:492)
+	at org.eclipse.egit.core.Activator$IgnoreDerivedResources$1.visit(Activator.java:517)
+	at org.eclipse.core.internal.events.ResourceDelta.accept(ResourceDelta.java:63)
+	at org.eclipse.core.internal.events.ResourceDelta.accept(ResourceDelta.java:74)
+	at org.eclipse.core.internal.events.ResourceDelta.accept(ResourceDelta.java:74)
+	at org.eclipse.core.internal.events.ResourceDelta.accept(ResourceDelta.java:47)
+	at org.eclipse.egit.core.Activator$IgnoreDerivedResources.resourceChanged(Activator.java:495)
+	at org.eclipse.core.internal.events.NotificationManager$1.run(NotificationManager.java:299)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:42)
+	at org.eclipse.core.internal.events.NotificationManager.notify(NotificationManager.java:289)
+	at org.eclipse.core.internal.events.NotificationManager.broadcastChanges(NotificationManager.java:152)
+	at org.eclipse.core.internal.resources.Workspace.broadcastPostChange(Workspace.java:373)
+	at org.eclipse.core.internal.resources.Workspace.endOperation(Workspace.java:1470)
+	at org.eclipse.core.internal.events.AutoBuildJob.doBuild(AutoBuildJob.java:157)
+	at org.eclipse.core.internal.events.AutoBuildJob.run(AutoBuildJob.java:235)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:55)
+
+!ENTRY org.eclipse.core.jobs 4 2 2016-01-02 20:33:51.766
+!MESSAGE An internal error occurred during: "Computing Git status for repository PersonalProjects".
+!STACK 0
+java.util.regex.PatternSyntaxException: Illegal repetition
+{\rtf1\ansi\ansicpg1252\cocoartf1348\cocoasubrtf170
+	at java.util.regex.Pattern.error(Pattern.java:1955)
+	at java.util.regex.Pattern.closure(Pattern.java:3157)
+	at java.util.regex.Pattern.sequence(Pattern.java:2134)
+	at java.util.regex.Pattern.expr(Pattern.java:1996)
+	at java.util.regex.Pattern.compile(Pattern.java:1696)
+	at java.util.regex.Pattern.<init>(Pattern.java:1351)
+	at java.util.regex.Pattern.compile(Pattern.java:1028)
+	at org.eclipse.jgit.ignore.internal.Strings.convertGlob(Strings.java:352)
+	at org.eclipse.jgit.ignore.internal.WildCardMatcher.<init>(WildCardMatcher.java:66)
+	at org.eclipse.jgit.ignore.internal.PathMatcher.createNameMatcher0(PathMatcher.java:145)
+	at org.eclipse.jgit.ignore.internal.PathMatcher.createPathMatcher(PathMatcher.java:127)
+	at org.eclipse.jgit.ignore.FastIgnoreRule.<init>(FastIgnoreRule.java:112)
+	at org.eclipse.jgit.ignore.IgnoreNode.parse(IgnoreNode.java:114)
+	at org.eclipse.jgit.treewalk.WorkingTreeIterator$PerDirectoryIgnoreNode.load(WorkingTreeIterator.java:1215)
+	at org.eclipse.jgit.treewalk.WorkingTreeIterator$RootIgnoreNode.load(WorkingTreeIterator.java:1236)
+	at org.eclipse.jgit.treewalk.WorkingTreeIterator.getIgnoreNode(WorkingTreeIterator.java:648)
+	at org.eclipse.jgit.treewalk.WorkingTreeIterator.isEntryIgnored(WorkingTreeIterator.java:616)
+	at org.eclipse.jgit.treewalk.WorkingTreeIterator.isEntryIgnored(WorkingTreeIterator.java:599)
+	at org.eclipse.jgit.treewalk.WorkingTreeIterator.isEntryIgnored(WorkingTreeIterator.java:586)
+	at org.eclipse.jgit.treewalk.filter.IndexDiffFilter.include(IndexDiffFilter.java:157)
+	at org.eclipse.jgit.treewalk.filter.AndTreeFilter$List.include(AndTreeFilter.java:163)
+	at org.eclipse.jgit.treewalk.TreeWalk.next(TreeWalk.java:572)
+	at org.eclipse.jgit.lib.IndexDiff.diff(IndexDiff.java:434)
+	at org.eclipse.egit.core.internal.indexdiff.IndexDiffCacheEntry.calcIndexDiffDataFull(IndexDiffCacheEntry.java:534)
+	at org.eclipse.egit.core.internal.indexdiff.IndexDiffCacheEntry.access$6(IndexDiffCacheEntry.java:523)
+	at org.eclipse.egit.core.internal.indexdiff.IndexDiffCacheEntry$4.run(IndexDiffCacheEntry.java:290)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:55)
