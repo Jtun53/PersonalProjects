@@ -1,0 +1,13 @@
+import net.sf.ofx4j.client.*;
+import net.sf.ofx4j.client.impl.OFXHomeFIDataStore;
+
+public class Main {
+
+	public static void main(String[] args) {
+		System.out.println("test");
+		FinancialInstitutionDataStore fid = new OFXHomeFIDataStore();
+		FinancialInstitutionData bofa = fid.getInstitutionData("6805");
+		//System.out.println(bofa.getFinancialInstitutionId());
+	}
+
+}

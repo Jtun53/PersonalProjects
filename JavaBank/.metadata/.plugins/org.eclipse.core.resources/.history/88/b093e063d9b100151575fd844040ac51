@@ -1,0 +1,13 @@
+import net.sf.ofx4j.client.*;
+
+public class Main {
+
+	public static void main(String[] args) {
+		System.out.println("test");
+		FinancialInstitutionDataStore fid = null;
+		fid.getInstitutionDataList();
+		
+
+	}
+
+}
