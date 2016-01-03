@@ -1,0 +1,44 @@
+import java.net.MalformedURLException;
+import java.net.URL;
+import java.text.DateFormat;
+import java.util.Date;
+import java.util.Map;
+
+import net.sf.ofx4j.OFXException;
+import net.sf.ofx4j.client.*;
+import net.sf.ofx4j.client.impl.BaseFinancialInstitutionData;
+import net.sf.ofx4j.client.impl.FinancialInstitutionServiceImpl;
+import net.sf.ofx4j.client.impl.OFXHomeFIDataStore;
+import net.sf.ofx4j.domain.data.banking.AccountType;
+import net.sf.ofx4j.domain.data.banking.BankAccountDetails;
+import net.sf.ofx4j.domain.data.creditcard.CreditCardAccountDetails;
+
+public class Main {
+
+	public static void main(String[] args) throws MalformedURLException {
+		//OFXHomeFIDataStore fid = new OFXHomeFIDataStore();
+		//fid.setUrl("https://ofx.bankofamerica.com/cgi-forte/ofx?servicename=ofx_2-3&pagename=bofa");
+		//FinancialInstitutionData chase1 = fid.getInstitutionData("5959");
+		
+		//System.out.println(chase1.getId());
+		//FinancialInstitutionService service = new FinancialInstitutionServiceImpl();
+		//FinancialInstitution fi = service.getFinancialInstitution(chase1);
+		
+		BaseFinancialInstitutionData chase = new BaseFinancialInstitutionData();
+		//chase.setId("");
+		chase.setFinancialInstitutionId("10898");
+		chase.setName("Chase Credit Card");
+		chase.setBrokerId(null);
+		chase.setOrganization("B1");
+		chase.setOFXURL(new URL("https://ofx.chase.com"));
+		
+		FinancialInstitutionService service = new FinancialInstitutionServiceImpl();
+		FinancialInstitution fi = service.getFinancialInstitution(chase);
+		
+		CreditCardAccountDetails ccDetails = new CreditCardAccountDetails();
+		ccDetails.setAccountNumber("4266841441768270");
+		CreditCardAccount ccAccount = fi.loadCreditCardAccount(ccDetails, "jtungul53", "Jar060305*");
+	
+	}
+
+}

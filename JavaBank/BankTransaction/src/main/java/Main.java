@@ -1,18 +1,18 @@
-import net.sf.ofx4j.client.*;
-import net.sf.ofx4j.client.impl.FinancialInstitutionServiceImpl;
-import net.sf.ofx4j.client.impl.OFXHomeFIDataStore;
-import net.sf.ofx4j.domain.data.banking.BankAccountDetails;
+/*New way to implement is needed. Banks charge money for 
+direct accessing account info.
 
+Milestone Goal 1: Read bank transaction info manually by downloading
+Milestone Goal 2: Generate CSV file with categories and costs
+Milestone Goal 2.5: Generate PieChart based on expenses.
+Milestone Goal 3: Automatically Parse downloaded files and generate CSV
+Milestone Goal 4: Automatically retrieve transaction info from bank
+
+
+*/
 public class Main {
 
-	public static void main(String[] args) {
-		System.out.println("test");
-		OFXHomeFIDataStore fid = new OFXHomeFIDataStore();
-		fid.setUrl("https://ofx.bankofamerica.com/cgi-forte/ofx?servicename=ofx_2-3&pagename=bofa");
-		FinancialInstitutionData bofa = fid.getInstitutionData("6805");
-		FinancialInstitutionService service = new FinancialInstitutionServiceImpl();
-		FinancialInstitution fi = service.getFinancialInstitution(bofa);
-		
+	public static void main(String[] args){
+
 	}
 
 }
