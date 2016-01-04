@@ -1,0 +1,29 @@
+import java.io.FileNotFoundException;
+import java.io.FileReader;
+import au.com.bytecode.opencsv.CSVReader;
+
+/**
+ * 
+ * @author John Tungul
+ * This class will be used to read in a CSV file
+ * to create transaction objects 
+ */
+public class OpenCSV{
+	/**
+	 * 
+	 * @param fileName
+	 * OpenCSV constructor takes in a csv filename
+	 */
+	OpenCSV(String fileName){
+		try {
+			CSVReader reader = new CSVReader(new FileReader(fileName));
+			String[] nextLine;
+		    while ((nextLine = reader.readNext()) != null) {
+		        System.out.println(nextLine[0] + " " + nextLine[1] + " " + nextLine[2]);
+		    }
+		} catch (Exception e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+	}
+}

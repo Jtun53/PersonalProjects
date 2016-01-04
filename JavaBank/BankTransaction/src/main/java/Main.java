@@ -1,3 +1,5 @@
+import java.io.IOException;
+
 /*New way to implement is needed. Banks charge money for 
 direct accessing account info.
 
@@ -11,7 +13,8 @@ Milestone Goal 4: Automatically retrieve transaction info from bank
 */
 public class Main {
 
-	public static void main(String[] args){
+	public static void main(String[] args) throws IOException{
+		OpenCSV reader = new OpenCSV("December.csv");
 
 	}
 
