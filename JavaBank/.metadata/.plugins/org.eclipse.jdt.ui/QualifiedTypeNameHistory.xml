@@ -7,4 +7,8 @@
 <fullyQualifiedTypeName name="java.util.Date"/>
 <fullyQualifiedTypeName name="java.text.DateFormat"/>
 <fullyQualifiedTypeName name="net.sf.ofx4j.domain.data.creditcard.CreditCardAccountDetails"/>
+<fullyQualifiedTypeName name="net.sf.ofx4j.client.impl.BaseFinancialInstitutionData"/>
+<fullyQualifiedTypeName name="java.net.URL"/>
+<fullyQualifiedTypeName name="java.util.Map"/>
+<fullyQualifiedTypeName name="java.util.Map.Entry"/>
 </qualifiedTypeNameHistroy>
