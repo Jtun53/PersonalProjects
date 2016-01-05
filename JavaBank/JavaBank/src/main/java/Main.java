@@ -1,4 +1,5 @@
 import java.io.IOException;
+import java.util.List;
 
 /*New way to implement is needed. Banks charge money for 
 direct accessing account info.
@@ -15,7 +16,11 @@ public class Main {
 
 	public static void main(String[] args) throws IOException{
 		OpenCSV reader = new OpenCSV("December.csv");
-
+		List<Transaction> transactions = reader.createListOfTransactions();
+		
+		for (Transaction s : transactions){
+			System.out.println(s);
+		}
 	}
 
 }

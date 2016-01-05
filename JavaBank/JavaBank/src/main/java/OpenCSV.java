@@ -1,6 +1,7 @@
 import java.io.FileNotFoundException;
 import java.io.FileReader;
 import java.io.IOException;
+import java.util.ArrayList;
 import java.util.List;
 import au.com.bytecode.opencsv.CSVReader;
 
@@ -27,7 +28,15 @@ public class OpenCSV{
 		}
 	}
 	
-	//List<transactions> createListOfTransactions(){
-	//	return null;
-	//}
+	List<Transaction> createListOfTransactions() throws NumberFormatException, IOException{
+		String[] nextLine;
+		List<Transaction> transactions = new ArrayList<Transaction>();
+		aReader.readNext();
+		while ((nextLine = aReader.readNext()) != null) {
+	        // nextLine[] is an array of values from the line
+			transactions.add(new Transaction(Integer.valueOf(nextLine[0]), Double.valueOf(nextLine[1]),nextLine[2]));
+	        
+	     }
+		return transactions;
+	}
 }
