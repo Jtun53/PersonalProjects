@@ -13,6 +13,9 @@ Milestone Goal 4: Automatically retrieve transaction info from bank
 
 */
 public class Main {
+	
+	static double total=0;
+	static final double MONTHLYINCOME = 3000.00;
 
 	public static void main(String[] args) throws IOException{
 		OpenCSV reader = new OpenCSV("December.csv");
@@ -20,6 +23,7 @@ public class Main {
 		
 		for (Transaction s : transactions){
 			System.out.println(s);
+			total += s.getCost();
 		}
 	}
 
