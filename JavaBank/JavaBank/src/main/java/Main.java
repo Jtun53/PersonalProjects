@@ -8,6 +8,7 @@ import javax.swing.JPanel;
 import org.jfree.chart.ChartFactory;
 import org.jfree.chart.ChartPanel;
 import org.jfree.chart.JFreeChart;
+import org.jfree.chart.plot.PiePlot;
 import org.jfree.chart.title.TextTitle;
 import org.jfree.data.general.DefaultPieDataset;
 import org.jfree.data.general.PieDataset;
@@ -67,7 +68,7 @@ public class Main extends ApplicationFrame{
 	}
 		
 	public static void main(String[] args) throws IOException{
-		OpenCSV reader = new OpenCSV("December.csv");
+		OpenCSV reader = new OpenCSV("February.csv");
 		List<Transaction> transactions = reader.createListOfTransactions();
 		
 		for (Transaction s : transactions){
