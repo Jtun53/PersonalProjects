@@ -14,7 +14,7 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "37EE87A61C80D7D600DD23E1"
+               BlueprintIdentifier = "37EE87BD1C80E60300DD23E1"
                BuildableName = "DSPrac"
                BlueprintName = "DSPrac"
                ReferencedContainer = "container:DSPrac.xcodeproj">
@@ -32,7 +32,7 @@
       <MacroExpansion>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "37EE87A61C80D7D600DD23E1"
+            BlueprintIdentifier = "37EE87BD1C80E60300DD23E1"
             BuildableName = "DSPrac"
             BlueprintName = "DSPrac"
             ReferencedContainer = "container:DSPrac.xcodeproj">
@@ -55,7 +55,7 @@
          runnableDebuggingMode = "0">
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "37EE87A61C80D7D600DD23E1"
+            BlueprintIdentifier = "37EE87BD1C80E60300DD23E1"
             BuildableName = "DSPrac"
             BlueprintName = "DSPrac"
             ReferencedContainer = "container:DSPrac.xcodeproj">
@@ -74,7 +74,7 @@
          runnableDebuggingMode = "0">
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "37EE87A61C80D7D600DD23E1"
+            BlueprintIdentifier = "37EE87BD1C80E60300DD23E1"
             BuildableName = "DSPrac"
             BlueprintName = "DSPrac"
             ReferencedContainer = "container:DSPrac.xcodeproj">
