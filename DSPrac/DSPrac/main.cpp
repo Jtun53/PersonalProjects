@@ -9,10 +9,8 @@
 #include <iostream>
 #include "Node.h"
 #include "Node.cpp"
-#include "NodeTests.cpp"
 
 int main(int argc, const char * argv[]) {
-    NodeTests();
     //Node<int> *aPtr = new Node<int>(5);
     //std::cout << aPtr->getData();
     return 0;
