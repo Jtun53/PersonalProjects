@@ -8,10 +8,17 @@
 
 #include <iostream>
 #include "gtest/gtest.h"
-#include "calc.h"
+#include "Node.cpp"
 
 TEST (Node, Addition){
-    EXPECT_EQ(addition(10,10), 20);
+    Node<int> *begin = new Node<int>(1);
+    begin->setNext(new Node<int> (5));
+    //TESTING getData() function
+    EXPECT_EQ(begin->getData(), 1);
+    
+    begin = begin->getNext();
+    //TESTING setNext() function
+    EXPECT_EQ(begin->getData(), 5);
 }
 
 
