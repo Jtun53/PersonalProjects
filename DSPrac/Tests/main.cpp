@@ -10,15 +10,29 @@
 #include "gtest/gtest.h"
 #include "Node.cpp"
 
-TEST (Node, Addition){
-    Node<int> *begin = new Node<int>(1);
-    begin->setNext(new Node<int> (5));
+
+Node<int> *begin = new Node<int>(1);
+Node<int> *head = begin;
+
+TEST (Node, testNodeGetData){
     //TESTING getData() function
     EXPECT_EQ(begin->getData(), 1);
-    
+}
+
+TEST (Node, testNodeSetData){
+    begin->setNext(new Node<int> (5));
     begin = begin->getNext();
     //TESTING setNext() function
     EXPECT_EQ(begin->getData(), 5);
+    
+    //destroy unused objects
+    while (head != nullptr){
+        Node<int> *temp = head;
+        head = head->getNext();
+        delete temp;
+        temp = nullptr;
+    }
+    
 }
 
 

@@ -11,7 +11,5 @@
 #include "Node.cpp"
 
 int main(int argc, const char * argv[]) {
-    //Node<int> *aPtr = new Node<int>(5);
-    //std::cout << aPtr->getData();
     return 0;
 }
