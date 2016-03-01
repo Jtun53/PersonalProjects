@@ -72,11 +72,22 @@ int LinkedList<t>::remove(const t &data){
         next = next->getNext();
     }
     return -1;
-}
+};
 
 template <class t>
 bool LinkedList<t>::isEmpty(){
     if(count ==0)
         return true;
     return false;
+};
+
+template <class t>
+std::vector<t> LinkedList<t>::toVector(){
+    std::vector<t> myVec;
+    Node<t> *ptr = headPtr;
+    while (ptr){
+        myVec.push_back(ptr->getData());
+        ptr = ptr -> getNext();
+    }
+    return myVec;
 }

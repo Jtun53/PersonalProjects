@@ -32,8 +32,3 @@ template <class t>
 void Node<t>::setNext(Node<t> *next){
     this->next = next;
 };
-
-template <class t>
-int Node<t>::addition(int x, int y){
-    return x + y;
-}

@@ -22,6 +22,5 @@ public:
     void setData(t data);
     Node* getNext();
     void setNext(Node *next);
-    int addition(int x, int y);
 };
 #endif /* Node_h */

@@ -10,7 +10,7 @@
 #define LinkedList_h
 #include "Node.h"
 #include "Node.cpp"
-
+#include <vector>
 template <class t>
 class LinkedList{
     
@@ -26,7 +26,7 @@ public:
     bool isEmpty();
     bool contains(const t &data);
     
-    t display();
+    std::vector<t> toVector();
 };
 
 #endif /* LinkedList_h */

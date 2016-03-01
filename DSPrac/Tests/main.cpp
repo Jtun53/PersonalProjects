@@ -91,6 +91,19 @@ TEST (LinkedList, isEmpty){
     
 }
 
+TEST (LinkedList, toVector){
+    LinkedList<int> myList(0);
+    myList.add(3);
+    myList.add(2);
+    myList.add(6);
+    myList.add(4);
+    myList.remove(3);
+    std::vector<int> myVec = myList.toVector();
+    EXPECT_EQ(myVec[0], 0);
+    EXPECT_EQ(myVec[1], 2);
+    EXPECT_EQ(myVec[2], 6);
+}
+
 int main(int argc, char * argv[]) {
     testing::InitGoogleTest(&argc,argv);
     return RUN_ALL_TESTS();
