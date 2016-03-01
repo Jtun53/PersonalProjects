@@ -10,8 +10,9 @@
 #include "LinkedList.h"
 
 template <class t>
-LinkedList<t>::LinkedList(t data){
+LinkedList<t>::LinkedList(const t &data){
     headPtr = new Node<t>(data);
+    count = 1;
 };
 
 template <class t>
@@ -20,7 +21,7 @@ Node<t>* LinkedList<t>::getHead(){
 };
 
 template <class t>
-void LinkedList<t>::add(t data){
+void LinkedList<t>::add(const t &data){
     //current Linked List is Empty
     if (headPtr == nullptr){
         headPtr = new Node<t>(data);
@@ -32,4 +33,41 @@ void LinkedList<t>::add(t data){
         }
         current->setNext(new Node<t>(data));
     }
+    count++;
 };
+
+template <class t>
+int LinkedList<t>::remove(const t &data){
+    Node<t> *ptr = headPtr;
+    
+    //head ptr is the data to remove;
+    if (ptr -> getData() == data){
+        //the item to remove is head and the sole node
+        if ( count == 0){
+            Node<t> *temp = headPtr;
+            delete temp;
+            headPtr = nullptr;
+            temp = nullptr;
+        }
+        //there is more than 1 node.
+        else{
+            Node<t> *temp = headPtr;
+            headPtr = temp->getNext();
+            delete temp;
+            temp = nullptr;
+        }
+        return 1;
+    }
+    // node to delete is somewhere in the middle or end
+    Node<t> *next = ptr->getNext();
+    while (next){
+        if (next->getData() == data){
+            Node<t> *temp = next;
+            ptr->setNext(temp->getNext());
+            delete temp;
+        }
+        ptr = next;
+        next = next->getNext();
+    }
+    return -1;
+}

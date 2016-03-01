@@ -16,14 +16,17 @@ class LinkedList{
     
 private:
     Node<t> *headPtr;
+    int count;
     
 public:
-    LinkedList(t data);
+    LinkedList(const t &data);
     Node<t>* getHead();
-    void add(t data);
-    int remove(t data);
-    // bool isEmpty();
-    // t display();
+    void add(const t &data);
+    int remove(const t &data);
+    bool isEmpty();
+    bool contains(const t &data);
+    
+    t display();
 };
 
 #endif /* LinkedList_h */

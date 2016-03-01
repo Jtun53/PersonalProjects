@@ -64,6 +64,22 @@ TEST (LinkedList, add){
     
 }
 
+TEST (LinkedList, remove){
+    LinkedList<int> myList(2);
+    myList.add(3);
+    myList.add(6);
+    myList.add(9);
+    myList.remove(6);
+    Node<int> *ptr = myList.getHead();
+    ptr = ptr->getNext();
+    ptr = ptr->getNext();
+    EXPECT_EQ(ptr->getData(),9);
+    myList.remove(2);
+    EXPECT_EQ(myList.getHead()->getData(), 3);
+    myList.remove(9);
+    EXPECT_EQ(myList.getHead()->getNext(),nullptr);
+}
+
 int main(int argc, char * argv[]) {
     testing::InitGoogleTest(&argc,argv);
     return RUN_ALL_TESTS();
