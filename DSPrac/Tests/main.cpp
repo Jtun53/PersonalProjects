@@ -80,6 +80,17 @@ TEST (LinkedList, remove){
     EXPECT_EQ(myList.getHead()->getNext(),nullptr);
 }
 
+TEST (LinkedList, isEmpty){
+    LinkedList<int> myList(0);
+    EXPECT_EQ(myList.isEmpty(), false);
+    myList.add(3);
+    EXPECT_EQ(myList.isEmpty(),false);
+    myList.remove(3);
+    myList.remove(0);
+    EXPECT_EQ(myList.isEmpty(),true);
+    
+}
+
 int main(int argc, char * argv[]) {
     testing::InitGoogleTest(&argc,argv);
     return RUN_ALL_TESTS();

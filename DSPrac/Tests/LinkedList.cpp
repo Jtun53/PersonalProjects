@@ -56,6 +56,7 @@ int LinkedList<t>::remove(const t &data){
             delete temp;
             temp = nullptr;
         }
+        count--;
         return 1;
     }
     // node to delete is somewhere in the middle or end
@@ -65,9 +66,17 @@ int LinkedList<t>::remove(const t &data){
             Node<t> *temp = next;
             ptr->setNext(temp->getNext());
             delete temp;
+            count--;
         }
         ptr = next;
         next = next->getNext();
     }
     return -1;
+}
+
+template <class t>
+bool LinkedList<t>::isEmpty(){
+    if(count ==0)
+        return true;
+    return false;
 }
