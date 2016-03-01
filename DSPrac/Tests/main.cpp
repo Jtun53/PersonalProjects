@@ -103,6 +103,18 @@ TEST (LinkedList, toVector){
     EXPECT_EQ(myVec[1], 2);
     EXPECT_EQ(myVec[2], 6);
 }
+TEST (LinkedList, contains){
+    LinkedList<int> myList(3);
+    EXPECT_EQ(myList.contains(3), true);
+    myList.add(9);
+    EXPECT_EQ(myList.contains(9), true);
+    myList.remove(3);
+    EXPECT_EQ(myList.contains(3),false);
+    myList.add(3);
+    myList.add(3);
+    myList.remove(3);
+    EXPECT_EQ(myList.contains(3),true);
+}
 
 int main(int argc, char * argv[]) {
     testing::InitGoogleTest(&argc,argv);

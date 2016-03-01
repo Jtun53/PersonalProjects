@@ -90,4 +90,16 @@ std::vector<t> LinkedList<t>::toVector(){
         ptr = ptr -> getNext();
     }
     return myVec;
+};
+
+template <class t>
+bool LinkedList<t>::contains(const t &data){
+    Node<t> *ptr = headPtr;
+    while (ptr){
+        if (ptr->getData() == data){
+            return true;
+        }
+        ptr = ptr->getNext();
+    }
+    return false;
 }
