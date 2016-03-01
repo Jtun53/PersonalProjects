@@ -8,7 +8,8 @@
 
 #include <iostream>
 #include "gtest/gtest.h"
-#include "Node.cpp"
+//#include "Node.cpp"
+#include "LinkedList.cpp"
 
 
 Node<int> *begin = new Node<int>(1);
@@ -32,9 +33,36 @@ TEST (Node, testNodeSetData){
         delete temp;
         temp = nullptr;
     }
-    
 }
 
+TEST (LinkedList, getHead){
+    LinkedList<int> myList(5);
+    Node<int> *ptr = myList.getHead();
+    EXPECT_EQ(ptr->getData(), 5);
+}
+
+//Testing LinkedList add functionality
+TEST (LinkedList, add){
+    LinkedList<int> myList(1);
+    Node<int> *ptr = myList.getHead();
+    EXPECT_EQ(ptr->getData(),1);
+    
+    myList.add(2);
+    ptr = ptr->getNext();
+    EXPECT_EQ(ptr->getData(),2);
+    
+    myList.add(5);
+    ptr = ptr->getNext();
+    EXPECT_EQ(ptr->getData(),5);
+    
+    //destroy unused objects
+    while (ptr != nullptr){
+        Node<int> *temp = ptr;
+        ptr = ptr->getNext();
+        delete temp;
+    }
+    
+}
 
 int main(int argc, char * argv[]) {
     testing::InitGoogleTest(&argc,argv);

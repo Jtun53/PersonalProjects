@@ -13,17 +13,17 @@
 
 template <class t>
 class LinkedList{
-    
+
 private:
     Node<t> *headPtr;
-    
+
 public:
     LinkedList(t data);
     Node<t>* getHead();
     void add(t data);
     int remove(t data);
-    // bool isEmpty();
-    // t display();
+   // bool isEmpty();
+   // t display();
 };
 
 #endif /* LinkedList_h */

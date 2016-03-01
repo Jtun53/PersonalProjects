@@ -7,9 +7,10 @@
 //
 
 #include <iostream>
-#include "Node.h"
-#include "Node.cpp"
+#include "LinkedList.h"
+#include "LinkedList.cpp"
 
 int main(int argc, const char * argv[]) {
+    LinkedList<int>();
     return 0;
 }
