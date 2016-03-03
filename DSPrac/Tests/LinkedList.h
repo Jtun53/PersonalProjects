@@ -19,6 +19,7 @@ private:
     int count;
 
 public:
+    LinkedList();
     LinkedList(const t &data);
     Node<t>* getHead();
     void add(const t &data);
