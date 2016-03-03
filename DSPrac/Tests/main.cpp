@@ -8,8 +8,9 @@
 
 #include <iostream>
 #include "gtest/gtest.h"
-//#include "Node.cpp"
+#include "Node.cpp"
 #include "LinkedList.cpp"
+#include "Stack.cpp"
 
 
 Node<int> *begin = new Node<int>(1);
@@ -114,6 +115,30 @@ TEST (LinkedList, contains){
     myList.add(3);
     myList.remove(3);
     EXPECT_EQ(myList.contains(3),true);
+}
+
+TEST (Stack, isEmpty){
+    Stack<int> myStack;
+    EXPECT_EQ(myStack.isEmpty(), true);
+    
+}
+
+TEST (Stack, push){
+    Stack<int> myStack;
+    myStack.push(3);
+    EXPECT_EQ(myStack.isEmpty(), false);
+}
+
+TEST (Stack, pop){
+    Stack<int> myStack;
+    myStack.push(3);
+    myStack.pop();
+    EXPECT_EQ(myStack.isEmpty(), true);
+    myStack.push(4);
+    myStack.push(2);
+    myStack.pop();
+    EXPECT_EQ(myStack.isEmpty(),false);
+    
 }
 
 int main(int argc, char * argv[]) {

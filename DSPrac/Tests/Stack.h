@@ -10,18 +10,16 @@
 #define Stack_h
 
 #include "Node.h"
-#include "Node.cpp"
-#include "LinkedList.h"
-#include "LinkedList.cpp"
 
 template <class t>
 class Stack{
 private:
-    Node<t> *current;
+    Node<t> *top;
     
 public:
+    Stack();
     bool isEmpty();
-    int push(const t &data);
+    void push(const t &data);
     bool pop();
     t peek();
 };

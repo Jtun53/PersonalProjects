@@ -11,11 +11,11 @@
 
 template <class t>
 class Node{
-
+    
 private:
     t data;
     Node<t> *next;
-
+    
 public:
     Node(const t &data);
     t getData();

@@ -10,6 +10,12 @@
 #include "LinkedList.h"
 
 template <class t>
+LinkedList<t>::LinkedList(){
+    headPtr = nullptr;
+    count = 0;
+};
+
+template <class t>
 LinkedList<t>::LinkedList(const t &data){
     headPtr = new Node<t>(data);
     count = 1;

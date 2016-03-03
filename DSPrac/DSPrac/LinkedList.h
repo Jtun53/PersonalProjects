@@ -9,7 +9,6 @@
 #ifndef LinkedList_h
 #define LinkedList_h
 #include "Node.h"
-#include "Node.cpp"
 #include <vector>
 template <class t>
 class LinkedList{
@@ -19,6 +18,7 @@ private:
     int count;
     
 public:
+    LinkedList();
     LinkedList(const t &data);
     Node<t>* getHead();
     void add(const t &data);

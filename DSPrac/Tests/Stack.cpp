@@ -9,18 +9,37 @@
 #include "Stack.h"
 
 template <class t>
+Stack<t>::Stack(){
+    top = nullptr;
+}
+
+template <class t>
 bool Stack<t>::isEmpty(){
-    
+    if (top == nullptr)
+        return true;
+    else
+        return false;
 };
 
 template <class t>
-int Stack<t>::push(const t &data){
-    
+void Stack<t>::push(const t &data){
+    Node<t> *current = top;
+    top = new Node<t>(data);
+    top->setNext(current);
 }
 
 template <class t>
 bool Stack<t>::pop(){
-    
+    if(top){
+        Node<t> *nodeToDelete = top;
+        top = top->getNext();
+        nodeToDelete->setNext(nullptr);
+        delete nodeToDelete;
+        nodeToDelete = nullptr;
+        return true;
+    }
+    else
+        return false;
 };
 
 template <class t>

@@ -9,7 +9,6 @@
 #ifndef LinkedList_h
 #define LinkedList_h
 #include "Node.h"
-#include "Node.cpp"
 #include <vector>
 template <class t>
 class LinkedList{
