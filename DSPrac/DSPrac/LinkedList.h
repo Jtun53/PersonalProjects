@@ -10,6 +10,8 @@
 #define LinkedList_h
 #include "Node.h"
 #include <vector>
+#include <Exception>
+
 template <class t>
 class LinkedList{
     
@@ -25,6 +27,9 @@ public:
     int remove(const t &data);
     bool isEmpty();
     bool contains(const t &data);
+    
+    t getEntry(int pos) const throw (std::exception);
+    bool insert(int pos, const t &data) const throw (std::exception);
     
     std::vector<t> toVector();
 };

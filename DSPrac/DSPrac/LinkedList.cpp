@@ -9,6 +9,7 @@
 #include <stdio.h>
 #include "LinkedList.h"
 
+
 template <class t>
 LinkedList<t>::LinkedList(){
     headPtr = nullptr;
@@ -108,4 +109,22 @@ bool LinkedList<t>::contains(const t &data){
         ptr = ptr->getNext();
     }
     return false;
-}
+};
+
+template <class t>
+t LinkedList<t>::getEntry(int pos) const throw(std::exception){
+    if (pos < 1 || pos > count){
+        throw (std::exception());
+    }
+    else{
+        Node<t> *ptr = headPtr;
+        for (int i=1; i<pos; i++)
+            ptr = ptr->getNext();
+            return ptr->getData();
+            }
+};
+
+template <class t>
+bool LinkedList<t>::insert(int pos, const t &data) const throw(std::exception){
+    
+};

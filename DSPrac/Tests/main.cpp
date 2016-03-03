@@ -117,6 +117,17 @@ TEST (LinkedList, contains){
     EXPECT_EQ(myList.contains(3),true);
 }
 
+TEST (LinkedList, getEntry){
+    LinkedList<int> myList(2);
+    myList.add(3);
+    myList.add(9);
+    myList.add(5);
+    EXPECT_EQ(myList.getEntry(1), 2);
+    EXPECT_EQ(myList.getEntry(2), 3);
+    EXPECT_EQ(myList.getEntry(3), 9);
+    EXPECT_EQ(myList.getEntry(4), 5);
+}
+
 TEST (Stack, isEmpty){
     Stack<int> myStack;
     EXPECT_EQ(myStack.isEmpty(), true);
