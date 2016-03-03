@@ -140,6 +140,15 @@ TEST (Stack, pop){
     EXPECT_EQ(myStack.isEmpty(),false);
     
 }
+TEST (Stack, peek){
+    Stack<int> myStack;
+    myStack.push(2);
+    EXPECT_EQ(myStack.peek(), 2);
+    myStack.push(4);
+    EXPECT_EQ(myStack.peek(), 4);
+    myStack.pop();
+    EXPECT_EQ(myStack.peek(),2);
+}
 
 int main(int argc, char * argv[]) {
     testing::InitGoogleTest(&argc,argv);

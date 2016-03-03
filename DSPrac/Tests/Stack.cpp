@@ -44,5 +44,6 @@ bool Stack<t>::pop(){
 
 template <class t>
 t Stack<t>::peek(){
-    
+    assert(!isEmpty());
+    return top->getData();
 };
