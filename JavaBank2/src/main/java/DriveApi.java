@@ -21,6 +21,9 @@ import java.io.InputStreamReader;
 import java.util.Arrays;
 import java.util.List;
 import java.io.OutputStream;
+import java.nio.file.FileSystems;
+import java.nio.file.Path;
+import java.nio.file.Files;
 
 public class DriveApi {
     /**
@@ -128,5 +131,10 @@ public class DriveApi {
         OutputStream outputStream = new FileOutputStream(file.getName());
         service.files().export(file.getId(),"text/csv").executeMediaAndDownloadTo(outputStream);
 
+    }
+
+    public static void deleteFile() throws IOException{
+        Path path = FileSystems.getDefault().getPath("March");
+        Files.deleteIfExists(path);
     }
 }
