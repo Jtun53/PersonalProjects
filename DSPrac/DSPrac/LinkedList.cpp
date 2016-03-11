@@ -126,5 +126,20 @@ t LinkedList<t>::getEntry(int pos) const throw(std::exception){
 
 template <class t>
 bool LinkedList<t>::insert(int pos, const t &data) const throw(std::exception){
+    //There will be 2 scenarios, inserting at the beginning,
+    //or the middle
+    if (pos < 1 || pos > count+1){
+        throw std::exception();
+    }
+    else{
+        if(pos == 1){
+        Node<t> *oldHead = headPtr;
+        headPtr = new Node<t>(data);
+        headPtr->setNext(oldHead);
+        }
+        else{
+            //Traverse to spot and set pointers.
+        }
+    }
     
 };

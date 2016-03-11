@@ -27,7 +27,6 @@ Milestone Goal 2.5: Generate PieChart based on expenses.
 Milestone Goal 3: Automatically Parse downloaded files and generate CSV
 Milestone Goal 4: Automatically retrieve transaction info from bank
 
-
 */
 
 public class Main extends ApplicationFrame{
