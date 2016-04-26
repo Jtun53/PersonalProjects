@@ -161,6 +161,24 @@ TEST (Stack, peek){
     EXPECT_EQ(myStack.peek(),2);
 }
 
+/*
+TEST (ArrayList,isEmpty){
+
+}
+
+TEST (ArrayList,getLength){
+}
+ 
+TEST (ArrayList, insert){
+}
+ 
+TEST (ArrayList, remove){
+}
+
+TEST (ArrayList, clear){
+}
+*/
+
 int main(int argc, char * argv[]) {
     testing::InitGoogleTest(&argc,argv);
     return RUN_ALL_TESTS();
