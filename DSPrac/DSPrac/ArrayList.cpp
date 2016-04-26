@@ -9,6 +9,34 @@
 #include <stdio.h>
 #include "ArrayList.h"
 
-bool LinkedList::isEmpty(){
-    (itemCount == 0) ? return true : return false;
+template <class t>
+ArrayList<t>::ArrayList(){
+    itemCount = 0;
+};
+
+template <class t>
+bool ArrayList<t>::isEmpty(){
+    bool empty = false;
+    (itemCount == 0) ? empty = true : empty = false;
+    return empty;
+};
+
+template <class t>
+bool ArrayList<t>::insert(int pos, const t &data){
+    if (pos >= 1 && pos <= itemCount+1 && itemCount < MAXSIZE){
+        //copy over items from pos to itemCount +1 to right
+        for (int i = itemCount; i >= pos; i--){
+            list[i] = list[i-1];
+        }
+        list[pos-1] = data;
+        itemCount++;
+        return true;
+    }
+    else
+        return false;
+};
+
+template <class t>
+int ArrayList<t>::getLength(){
+    return itemCount;
 };

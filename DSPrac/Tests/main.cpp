@@ -165,14 +165,22 @@ TEST (Stack, peek){
 TEST (ArrayList,isEmpty){
     ArrayList<int> myArr;
     EXPECT_EQ(myArr.isEmpty(), true);
+    myArr.insert(1,2);
+    EXPECT_EQ(myArr.isEmpty(), false);
+}
+
+TEST (ArrayList, insert){
+    ArrayList<int> myArr;
+    myArr.insert(1,5);
+    EXPECT_EQ(myArr.insert(2,2), true);
+    EXPECT_EQ(myArr.insert(4,1), false);
+    EXPECT_EQ(myArr.insert(-1,4), false);
 }
 /*
 
 TEST (ArrayList,getLength){
 }
  
-TEST (ArrayList, insert){
-}
  
 TEST (ArrayList, remove){
 }
