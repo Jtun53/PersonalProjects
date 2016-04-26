@@ -11,6 +11,7 @@
 #include "Node.cpp"
 #include "LinkedList.cpp"
 #include "Stack.cpp"
+#include "ArrayList.cpp"
 
 
 Node<int> *begin = new Node<int>(1);
@@ -161,10 +162,11 @@ TEST (Stack, peek){
     EXPECT_EQ(myStack.peek(),2);
 }
 
-/*
 TEST (ArrayList,isEmpty){
-
+    ArrayList<int> myArr;
+    EXPECT_EQ(myArr.isEmpty(), true);
 }
+/*
 
 TEST (ArrayList,getLength){
 }
