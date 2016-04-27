@@ -127,7 +127,7 @@ public class DriveApi {
             System.out.println("No files found.");
         }
 
-        File file = files.get(1);
+        File file = files.get(0);
         OutputStream outputStream = new FileOutputStream(file.getName());
         service.files().export(file.getId(),"text/csv").executeMediaAndDownloadTo(outputStream);
 

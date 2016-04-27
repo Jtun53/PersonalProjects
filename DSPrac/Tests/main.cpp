@@ -176,15 +176,34 @@ TEST (ArrayList, insert){
     EXPECT_EQ(myArr.insert(4,1), false);
     EXPECT_EQ(myArr.insert(-1,4), false);
 }
-/*
+
 
 TEST (ArrayList,getLength){
+    ArrayList<int> myArr;
+    myArr.insert(1,2);
+    EXPECT_EQ(myArr.getLength(), 1);
+    myArr.insert(2,3);
+    EXPECT_EQ(myArr.getLength(),2);
+    myArr.insert(5,2);
+    EXPECT_EQ(myArr.getLength(),2);
+    myArr.insert(-1,2);
+    EXPECT_EQ(myArr.getLength(),2);
 }
  
- 
-TEST (ArrayList, remove){
-}
 
+TEST (ArrayList, remove){
+    ArrayList<int> myArr;
+    myArr.insert(1,1);
+    myArr.insert(2,2);
+    myArr.insert(3,3);
+    myArr.insert(4,4);
+    myArr.insert(5,5);
+    EXPECT_EQ(myArr.remove(1), true);
+    EXPECT_EQ(myArr.remove(2),true);
+    EXPECT_EQ(myArr.remove(4),false);
+    EXPECT_EQ(myArr.remove(0),false);
+}
+/*
 TEST (ArrayList, clear){
 }
 */

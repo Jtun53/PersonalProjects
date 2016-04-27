@@ -40,3 +40,16 @@ template <class t>
 int ArrayList<t>::getLength(){
     return itemCount;
 };
+
+template <class t>
+bool ArrayList<t>::remove(int pos){
+    if(pos <= itemCount && pos >= 1){
+        for (int i = pos; i != itemCount; i++){
+            list[i-1] = list[i];
+        }
+        itemCount--;
+        return true;
+    }
+    else
+        return false;
+};
