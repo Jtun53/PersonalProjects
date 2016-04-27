@@ -7,11 +7,13 @@
 //
 
 #include <iostream>
+#include <vector>
 #include "gtest/gtest.h"
 #include "Node.cpp"
 #include "LinkedList.cpp"
 #include "Stack.cpp"
 #include "ArrayList.cpp"
+#include "SortingAlgos.cpp"
 
 
 Node<int> *begin = new Node<int>(1);
@@ -219,6 +221,11 @@ TEST (ArrayList, getEntry){
 TEST (ArrayList, clear){
 }
 */
+
+TEST (SortingAlgos, output){
+    std::vector <int> myVec = {5,1,2,3,7,9,4};
+    EXPECT_EQ(SortingAlgos<int>::output(myVec),"5 1 2 3 7 9 4");
+}
 
 int main(int argc, char * argv[]) {
     testing::InitGoogleTest(&argc,argv);

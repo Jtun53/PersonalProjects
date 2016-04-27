@@ -8,13 +8,17 @@
 
 #ifndef SortingAlgos_h
 #define SortingAlgos_h
+#include <vector>
 
 template <class t>
 class SortingAlgos{
-    static void bubbleSort(t &arr);
-    static void insertionSort(t &arr);
-    static void selectionSort(t &arr);
-    static void mergeSort(int first, int last, t &arr);
+    
+public:
+    static void bubbleSort(std::vector<t> &arr);
+    static void insertionSort(std::vector<t> &arr);
+    static void selectionSort(std::vector<t> &arr);
+    static void mergeSort(int first, int last, std::vector<t> &arr);
+    static std::string output(std::vector<t> &arr);
 };
 
 #endif /* SortingAlgos_h */
