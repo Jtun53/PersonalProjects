@@ -22,6 +22,7 @@ public:
     int getLength();
     bool insert(int pos,const t &data);
     bool remove(int pos);
+    t getEntry(int pos);
     void clear();
 };
 

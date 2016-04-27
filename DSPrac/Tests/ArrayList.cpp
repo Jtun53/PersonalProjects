@@ -8,6 +8,7 @@
 
 #include <stdio.h>
 #include "ArrayList.h"
+#include <Exception>
 
 template <class t>
 ArrayList<t>::ArrayList(){
@@ -53,3 +54,12 @@ bool ArrayList<t>::remove(int pos){
     else
         return false;
 };
+
+template <class t>
+t ArrayList<t>::getEntry(int pos){
+    if(pos <= itemCount && pos > 0){
+        return list[pos-1];
+    }
+    else
+        throw (std::exception());
+}

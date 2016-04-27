@@ -203,6 +203,18 @@ TEST (ArrayList, remove){
     EXPECT_EQ(myArr.remove(4),false);
     EXPECT_EQ(myArr.remove(0),false);
 }
+
+TEST (ArrayList, getEntry){
+    ArrayList<int> myArr;
+    myArr.insert(1,1);
+    EXPECT_EQ(myArr.getEntry(1), 1);
+    myArr.insert(1,3);
+    EXPECT_EQ(myArr.getEntry(1),3);
+    EXPECT_EQ(myArr.getEntry(2),1);
+    myArr.remove(1);
+    EXPECT_EQ(myArr.getEntry(1),1);
+}
+
 /*
 TEST (ArrayList, clear){
 }
