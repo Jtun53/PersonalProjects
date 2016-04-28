@@ -227,6 +227,12 @@ TEST (SortingAlgos, output){
     EXPECT_EQ(SortingAlgos<int>::output(myVec),"5 1 2 3 7 9 4");
 }
 
+TEST (SortingAlgos, bubbleSort){
+    std::vector<int> myVec = {5,1,2,3,7,9,4};
+    SortingAlgos<int>::bubbleSort(myVec);
+    EXPECT_EQ(SortingAlgos<int>::output(myVec), "1 2 3 4 5 7 9");
+}
+
 int main(int argc, char * argv[]) {
     testing::InitGoogleTest(&argc,argv);
     return RUN_ALL_TESTS();

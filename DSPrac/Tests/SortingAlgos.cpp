@@ -10,15 +10,19 @@
 #include "SortingAlgos.h"
 #include <vector>
 #include <string>
+#include <algorithm>
 
 template <class t>
 void SortingAlgos<t>::bubbleSort(std::vector<t> &arr){
-    
+    for (int i = 1; i != arr.size(); i++){
+        for (int j = 0; j != arr.size() - i; j++)
+            if (arr[j] > arr[j+1])
+                std::swap(arr[j],arr[j+1]);
+    }
 };
 
 template <class t>
 void SortingAlgos<t>::selectionSort(std::vector<t> &arr){
-    
 };
 
 template <class t>
